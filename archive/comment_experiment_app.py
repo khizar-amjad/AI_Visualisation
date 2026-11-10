@@ -1,7 +1,11 @@
 
+from pathlib import Path
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+
+DASHBOARD = Path(__file__).resolve().parents[1] / "dashboard"
 
 st.set_page_config(
     page_title="Does AI Trust Code or Comments?",
@@ -16,8 +20,8 @@ st.caption(
 
 @st.cache_data
 def load_data():
-    results = pd.read_csv("dashboard/results.csv")
-    annotations = pd.read_csv("dashboard/annotations.csv")
+    results = pd.read_csv(DASHBOARD / "results.csv")
+    annotations = pd.read_csv(DASHBOARD / "annotations.csv")
     return results, annotations
 
 results, annotations = load_data()
