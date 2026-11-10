@@ -62,4 +62,4 @@ Our experience suggests that Generative AI is most useful when treated as an **i
 
 AI helped us explore more alternatives and implement more ambitious experiments. However, verifying its outputs introduced additional work, particularly for semantic correctness and visualization design.
 
-We also learned that visualizations should not merely
+We also learned that visualizations should not merely present aggregate results but should help users understand individual model decisions, identify patterns, and investigate why certain comments influence model confidence.
