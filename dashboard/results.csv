@@ -1,0 +1,336 @@
+problem_id,comment_type,p_yes,p_no,prediction,code_length,ground_truth,task,task_category,task_categories,experiment,code_version,correct
+11,none,0.8104788661003113,0.18952108919620514,Yes,269,True,Write a python function to remove first and last occurrence of a given character from the string.,Strings,['Strings'],Full baseline,correct,
+12,none,0.9111796617507935,0.08882028609514236,Yes,69,True,Write a function to sort a given matrix in ascending order according to the sum of its rows.,Lists / Arrays,"['Mathematics', 'Lists / Arrays', 'Algorithms']",Full baseline,correct,
+14,none,0.8688268065452576,0.13117322325706482,Yes,55,True,Write a python function to find the volume of a triangular prism.,Other,['Other'],Full baseline,correct,
+16,none,0.8824278712272644,0.11757213622331619,Yes,193,True,Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.,Mathematics,"['Mathematics', 'Strings']",Full baseline,correct,
+17,none,0.9458011984825134,0.0541987270116806,Yes,59,True,Write a function that returns the perimeter of a square given its side length as input.,Other,['Other'],Full baseline,correct,
+18,none,0.8438951373100281,0.1561049073934555,Yes,639,True,Write a function to remove characters from the first string which are present in the second string.,Strings,['Strings'],Full baseline,correct,
+19,none,0.8807970285415649,0.11920291930437088,Yes,112,True,Write a function to find whether a given array of integers contains any duplicate element.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+20,none,0.8221890926361084,0.17781086266040802,Yes,190,True,Write a function to check if the given number is woodball or not.,Mathematics,['Mathematics'],Full baseline,correct,
+56,none,0.894789457321167,0.10521053522825241,Yes,201,True,Write a python function to check if a given number is one less than twice its reverse.,Mathematics,['Mathematics'],Full baseline,correct,
+57,none,0.9046505093574524,0.09534946084022522,Yes,165,True,Write a python function to find the largest number that can be formed with the given list of digits.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+58,none,0.9111796617507935,0.08882028609514236,Yes,52,True,Write a python function to check whether the given two integers have opposite sign or not.,Mathematics,['Mathematics'],Full baseline,correct,
+59,none,0.7025300860404968,0.29746994376182556,Yes,48,True,Write a function to find the nth octagonal number.,Mathematics,['Mathematics'],Full baseline,correct,
+61,none,0.8757869601249695,0.12421300262212753,Yes,285,True,Write a python function to count the number of substrings with the sum of digits equal to their length.,Mathematics,"['Mathematics', 'Strings']",Full baseline,correct,
+62,none,0.9458011984825134,0.0541987270116806,Yes,39,True,Write a python function to find smallest number in a list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+63,none,0.8807970285415649,0.11920291930437088,Yes,108,True,Write a function to find the maximum difference between available pairs in the given tuple list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+64,none,0.9449946880340576,0.055005282163619995,Yes,187,True,Write a function to sort a list of tuples using the second value of each tuple.,Lists / Arrays,"['Lists / Arrays', 'Algorithms']",Full baseline,correct,
+65,none,0.8418256044387817,0.15817435085773468,Yes,200,True,Write a function to flatten a list and sum all of its elements.,Lists / Arrays,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+66,none,0.9399133324623108,0.06008664518594742,Yes,114,True,Write a python function to count the number of positive numbers in a list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+67,none,0.859663724899292,0.14033624529838562,Yes,280,True,Write a function to find the number of ways to partition a set of Bell numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+68,none,0.9324532747268677,0.06754669547080994,Yes,148,True,Write a python function to check whether the given array is monotonic or not.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+69,none,0.859663724899292,0.14033624529838562,Yes,320,True,Write a function to check whether a list contains the given sublist or not.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+70,none,0.859663724899292,0.14033624529838562,Yes,226,True,Write a function to find whether all the given tuples have equal length or not.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+71,none,0.9059898257255554,0.09401018917560577,Yes,410,True,Write a function to sort a list of elements.,Lists / Arrays,"['Lists / Arrays', 'Algorithms']",Full baseline,correct,
+72,none,0.859663724899292,0.14033624529838562,Yes,78,True,Write a python function to check whether the given number can be represented as the difference of two squares or not.,Mathematics,['Mathematics'],Full baseline,correct,
+74,none,0.8499711751937866,0.15002882480621338,Yes,650,True,Write a function to check whether it follows the sequence given in the patterns array.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+75,none,0.9111796617507935,0.08882028609514236,Yes,114,True,Write a function to find tuples which have all elements divisible by k from the given list of tuples.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+77,none,0.907312273979187,0.09268777817487717,Yes,42,True,Write a python function to find whether a number is divisible by 11.,Mathematics,['Mathematics'],Full baseline,correct,
+79,none,0.8175744414329529,0.18242551386356354,Yes,155,True,Write a python function to check whether the length of the word is odd or not.,Strings,['Strings'],Full baseline,correct,
+80,none,0.9324532747268677,0.06754669547080994,Yes,63,True,Write a function to find the nth tetrahedral number.,Mathematics,['Mathematics'],Full baseline,correct,
+82,none,0.929440438747406,0.07055959850549698,Yes,78,True,Write a function to find the volume of a sphere.,Other,['Other'],Full baseline,correct,
+83,none,0.8840392827987671,0.11596070975065231,Yes,241,True,Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26.,Strings,['Strings'],Full baseline,correct,
+84,none,0.7853085398674011,0.2146914154291153,Yes,120,True,Write a function to find the nth number in the newman conway sequence.,Mathematics,['Mathematics'],Full baseline,correct,
+85,none,0.929440438747406,0.07055959850549698,Yes,87,True,Write a function to find the surface area of a sphere.,Other,['Other'],Full baseline,correct,
+86,none,0.9314625263214111,0.06853749603033066,Yes,62,True,Write a function to find nth centered hexagonal number.,Mathematics,['Mathematics'],Full baseline,correct,
+87,none,0.9032942056655884,0.09670579433441162,Yes,155,True,Write a function to merge three dictionaries into a single dictionary.,Other,['Other'],Full baseline,correct,
+88,none,0.9433475732803345,0.05665242671966553,Yes,102,True,"Write a function to get the frequency of all the elements in a list, returned as a dictionary.",Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+89,none,0.8080672025680542,0.1919327974319458,Yes,36,True,Write a function to find the closest smaller number than n.,Mathematics,['Mathematics'],Full baseline,correct,
+90,none,0.8333246111869812,0.16667540371418,Yes,122,True,Write a python function to find the length of the longest word.,Strings,['Strings'],Full baseline,correct,
+91,none,0.9149009585380554,0.08509904146194458,Yes,108,True,Write a function to check if a string is present as a substring in a given list of string values.,Strings,"['Strings', 'Lists / Arrays']",Full baseline,correct,
+92,none,0.9032942056655884,0.09670579433441162,Yes,153,True,Write a function to check whether the given number is undulating or not.,Mathematics,['Mathematics'],Full baseline,correct,
+93,none,0.8902942538261414,0.10970577597618103,Yes,113,True,Write a function to calculate the value of 'a' to the power 'b'.,Other,['Other'],Full baseline,correct,
+94,none,0.8991213440895081,0.10087861120700836,Yes,125,True,"Given a list of tuples, write a function that returns the first value of the tuple with the smallest second value.",Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+95,none,0.9184802770614624,0.08151975274085999,Yes,91,True,Write a python function to find the length of the smallest list in a list of lists.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+96,none,0.6619228720664978,0.3380771279335022,Yes,99,True,Write a python function to find the number of divisors of a given integer.,Mathematics,['Mathematics'],Full baseline,correct,
+97,none,0.8872045874595642,0.1127953976392746,Yes,306,True,"Write a function to find frequency of each element in a flattened list of lists, returned in a dictionary.",Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+98,none,0.8723474144935608,0.1276526302099228,Yes,116,True,Write a function to multiply all the numbers in a list and divide with the length of the list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+99,none,0.9273632764816284,0.07263670116662979,Yes,62,True,"Write a function to convert the given decimal number to its binary equivalent, represented as a string with no leading zeros.",Mathematics,"['Mathematics', 'Strings', 'Algorithms']",Full baseline,correct,
+100,none,0.8499711751937866,0.15002882480621338,Yes,162,True,"Write a function to find the next smallest palindrome of a specified integer, returned as an integer.",Mathematics,['Mathematics'],Full baseline,correct,
+101,none,0.8807970285415649,0.11920291930437088,Yes,181,True,Write a function to find the kth element in the given array using 1-based indexing.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+102,none,0.9241418242454529,0.07585817575454712,Yes,114,True,Write a function to convert a snake case string to camel case string.,Strings,['Strings'],Full baseline,correct,
+103,none,0.8723474144935608,0.1276526302099228,Yes,169,True,"Write a function to find the Eulerian number a(n, m).",Mathematics,['Mathematics'],Full baseline,correct,
+104,none,0.9149009585380554,0.08509904146194458,Yes,116,True,Write a function to sort each sublist of strings in a given list of lists.,Strings,"['Strings', 'Lists / Arrays', 'Algorithms']",Full baseline,correct,
+105,none,0.8104788661003113,0.18952108919620514,Yes,39,True,Write a python function to count true booleans in the given list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+106,none,0.8289388418197632,0.1710611879825592,Yes,93,True,Write a function to append the given list to the given tuples.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+108,none,0.8807970285415649,0.11920291930437088,Yes,172,True,Write a function to merge three lists into a single sorted list.,Lists / Arrays,"['Lists / Arrays', 'Algorithms']",Full baseline,correct,
+109,none,0.8267117738723755,0.17328819632530212,Yes,138,True,Write a python function to find the number of numbers with an odd value when rotating a binary string the given number of times.,Mathematics,"['Mathematics', 'Strings', 'Algorithms']",Full baseline,correct,
+111,none,0.8902942538261414,0.10970577597618103,Yes,116,True,Write a function to find the common elements in given nested lists.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+113,none,0.8688268065452576,0.13117322325706482,Yes,327,True,Write a function to check if a string represents an integer or not.,Mathematics,"['Mathematics', 'Strings']",Full baseline,correct,
+115,none,0.8479677438735962,0.15203224122524261,Yes,76,True,Write a function to check whether all dictionaries in a list are empty or not.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+116,none,0.9284088015556335,0.07159119844436646,Yes,82,True,Write a function to convert a given tuple of positive integers into a single integer.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+117,none,0.8175744414329529,0.18242551386356354,Yes,239,True,Write a function to convert all possible convertible elements in a list of lists to floats.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+118,none,0.9553191661834717,0.0446808747947216,Yes,78,True,Write a function to convert a string to a list of strings split on the space character.,Strings,"['Strings', 'Lists / Arrays']",Full baseline,correct,
+119,none,0.8856314420700073,0.11436852067708969,Yes,113,True,Write a python function to find the element that appears only once in a sorted array.,Lists / Arrays,"['Lists / Arrays', 'Algorithms']",Full baseline,correct,
+120,none,0.894789457321167,0.10521053522825241,Yes,105,True,Write a function to find the maximum absolute product between numbers in pairs of tuples within a given list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+123,none,0.9005298018455505,0.09947021305561066,Yes,585,True,Write a function to sum all amicable numbers from 1 to a specified number.,Mathematics,['Mathematics'],Full baseline,correct,
+124,none,0.8558511734008789,0.14414885640144348,Yes,94,True,Write a function to get the angle of a complex number.,Mathematics,['Mathematics'],Full baseline,correct,
+125,none,0.8791467547416687,0.1208532303571701,Yes,258,True,Write a function to find the maximum difference between the number of 0s and number of 1s in any sub-string of the given binary string.,Mathematics,"['Mathematics', 'Strings', 'Algorithms']",Full baseline,correct,
+126,none,0.8991213440895081,0.10087861120700836,Yes,138,True,Write a python function to find the sum of common divisors of two given numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+127,none,0.9136765599250793,0.08632348477840424,Yes,193,True,Write a function to multiply two integers.,Mathematics,['Mathematics'],Full baseline,correct,
+128,none,0.894789457321167,0.10521053522825241,Yes,159,True,Write a function to find words that are longer than n characters from a given list of words.,Strings,"['Strings', 'Lists / Arrays']",Full baseline,correct,
+129,none,0.8438951373100281,0.1561049073934555,Yes,525,True,Write a function to calculate whether the matrix is a magic square.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+130,none,0.9086179733276367,0.09138210862874985,Yes,203,True,Write a function to find the item with maximum frequency in a given list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+131,none,0.894789457321167,0.10521053522825241,Yes,278,True,Write a python function to reverse only the vowels of a given string (where y is not a vowel).,Strings,['Strings'],Full baseline,correct,
+132,none,0.9086179733276367,0.09138210862874985,Yes,57,True,Write a function to convert a tuple to a string.,Strings,"['Strings', 'Lists / Arrays']",Full baseline,correct,
+133,none,0.8577680587768555,0.14223188161849976,Yes,114,True,Write a function to calculate the sum of the negative numbers of a given list of numbers.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+135,none,0.9362850189208984,0.06371499598026276,Yes,43,True,Write a function to find the nth hexagonal number.,Mathematics,['Mathematics'],Full baseline,correct,
+137,none,0.8244618773460388,0.1755380630493164,Yes,182,True,Write a function to find the ratio of zeroes to non-zeroes in an array of integers.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+138,none,0.8774768114089966,0.12252321094274521,Yes,106,True,Write a python function to check whether the given number can be represented as sum of non-zero powers of 2 or not.,Mathematics,['Mathematics'],Full baseline,correct,
+139,none,0.9111796617507935,0.08882028609514236,Yes,70,True,Write a function to find the circumference of a circle.,Other,['Other'],Full baseline,correct,
+140,none,0.7956580519676208,0.20434190332889557,Yes,192,True,Write a function to flatten the list of lists into a single set of numbers.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+141,none,0.9032942056655884,0.09670579433441162,Yes,265,True,Write a function to sort a list of elements.,Lists / Arrays,"['Lists / Arrays', 'Algorithms']",Full baseline,correct,
+142,none,0.917302668094635,0.08269733935594559,Yes,124,True,Write a function to count number items that are identical in the same position of three given lists.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+143,none,0.8577680587768555,0.14223188161849976,Yes,93,True,Write a function to find number of lists present in the given tuple.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+145,none,0.9263036847114563,0.07369627058506012,Yes,213,True,Write a python function to find the maximum difference between any two elements in a given array.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+160,none,0.8418256044387817,0.15817435085773468,Yes,142,True,"Write a function that returns integers x and y that satisfy ax + by = n as a tuple, or return None if no solution exists.",Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+161,none,0.9046505093574524,0.09534946084022522,Yes,102,True,Write a function to remove all elements from a given list present in another list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+162,none,0.8740772008895874,0.1259227693080902,Yes,84,True,"Write a function to calculate the sum (n - 2*i) from i=0 to n // 2, for instance n + (n-2) + (n-4)... (until n-x =< 0).",Other,['Mathematics'],Full baseline,correct,
+163,none,0.9059898257255554,0.09401018917560577,Yes,104,True,Write a function to calculate the area of a regular polygon given the length and number of its sides.,Mathematics,['Mathematics'],Full baseline,correct,
+164,none,0.9111796617507935,0.08882028609514236,Yes,242,True,Write a function to determine if the sum of the divisors of two integers are the same.,Mathematics,['Mathematics'],Full baseline,correct,
+165,none,0.8902942538261414,0.10970577597618103,Yes,228,True,Write a function to count the number of characters in a string that occur at the same position in the string as in the English alphabet (case insensitive).,Mathematics,"['Mathematics', 'Strings']",Full baseline,correct,
+166,none,0.8539127111434937,0.14608724415302277,Yes,174,True,Write a function that counts the number of pairs of integers in a list that xor to an even number.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+167,none,0.8840392827987671,0.11596070975065231,Yes,145,True,Write a python function to find the smallest power of 2 greater than or equal to n.,Other,['Other'],Full baseline,correct,
+168,none,0.9263036847114563,0.07369627058506012,Yes,109,True,Write a function to count the number of occurrences of a number in a given list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+170,none,0.9196425676345825,0.08035746961832047,Yes,906,True,Write a function to find the sum of numbers in a list within a range specified by two indices.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+171,none,0.9086179733276367,0.09138210862874985,Yes,75,True,Write a function to find the perimeter of a regular pentagon from the length of its sides.,Other,['Other'],Full baseline,correct,
+172,none,0.8991213440895081,0.10087861120700836,Yes,162,True,Write a function to count the number of occurence of the string 'std' in a given string.,Mathematics,"['Mathematics', 'Strings']",Full baseline,correct,
+222,none,0.9046505093574524,0.09534946084022522,Yes,160,True,Write a function to check if all the elements in tuple have same data type or not.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+223,none,0.8438951373100281,0.1561049073934555,Yes,462,True,"Write a function that takes in a sorted array, its length (n), and an element and returns whether the element is the majority element in the given sorted array. (The majority element is the element that occurs more than n/2 times.)",Lists / Arrays,"['Lists / Arrays', 'Algorithms']",Full baseline,correct,
+224,none,0.9504110217094421,0.04958902671933174,Yes,110,True,Write a python function to count the number of set bits (binary digits with value 1) in a given number.,Mathematics,"['Mathematics', 'Algorithms']",Full baseline,correct,
+226,none,0.9086179733276367,0.09138210862874985,Yes,136,True,Write a python function to remove the characters which have odd index values of a given string.,Strings,['Strings'],Full baseline,correct,
+227,none,0.9353464841842651,0.06465348601341248,Yes,195,True,Write a function to find minimum of three numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+228,none,0.8333246111869812,0.16667540371418,Yes,179,True,Write a python function to check whether all the bits are unset in the given range or not.,Other,['Other'],Full baseline,correct,
+229,none,0.9032942056655884,0.09670579433441162,Yes,171,True,"Write a function that takes in an array and an integer n, and re-arranges the first n elements of the given array so that all negative elements appear before positive ones, and where the relative order among negative and positive elements is preserved.",Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+230,none,0.9284088015556335,0.07159119844436646,Yes,74,True,"Write a function that takes in a string and character, replaces blank spaces in the string with the character, and returns the string.",Strings,['Strings'],Full baseline,correct,
+232,none,0.9136765599250793,0.08632348477840424,Yes,85,True,Write a function that takes in a list and an integer n and returns a list containing the n largest items from the list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+233,none,0.9059898257255554,0.09401018917560577,Yes,87,True,Write a function to find the lateral surface area of a cylinder.,Other,['Other'],Full baseline,correct,
+234,none,0.9362850189208984,0.06371499598026276,Yes,56,True,Write a function to find the volume of a cube given its side length.,Other,['Other'],Full baseline,correct,
+235,none,0.8688268065452576,0.13117322325706482,Yes,202,True,Write a python function to set all even bits of a given number.,Mathematics,['Mathematics'],Full baseline,correct,
+237,none,0.8976953029632568,0.10230470448732376,Yes,150,True,Write a function that takes in a list of tuples and returns a dictionary mapping each unique tuple to the number of times it occurs in the list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+238,none,0.8872045874595642,0.1127953976392746,Yes,96,True,Write a python function to count the number of non-empty substrings of a given string.,Mathematics,"['Mathematics', 'Strings']",Full baseline,correct,
+239,none,0.8872045874595642,0.1127953976392746,Yes,292,True,"Write a function that takes in positive integers m and n and finds the number of possible sequences of length n, such that each element is a positive integer and is greater than or equal to twice the previous element but less than or equal to m.",Mathematics,['Mathematics'],Full baseline,correct,
+240,none,0.66888028383255,0.33111974596977234,Yes,92,True,Write a function that takes in two lists and replaces the last element of the first list with the elements of the second list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+242,none,0.9343951344490051,0.06560482829809189,Yes,86,True,Write a function to count the total number of characters in a string.,Mathematics,"['Mathematics', 'Strings']",Full baseline,correct,
+244,none,0.9149009585380554,0.08509904146194458,Yes,109,True,Write a python function to find the next perfect square greater than a given number.,Mathematics,['Mathematics'],Full baseline,correct,
+245,none,0.8397339582443237,0.16026602685451508,Yes,475,True,"Write a function that takes an array and finds the maximum sum of a bitonic subsequence for the given array, where a sequence is bitonic if it is first increasing and then decreasing.",Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+246,none,0.917302668094635,0.08269733935594559,Yes,205,True,Write a function for computing square roots using the babylonian method.,Other,['Other'],Full baseline,correct,
+247,none,0.9230391979217529,0.07696083933115005,Yes,360,True,Write a function to find the length of the longest palindromic subsequence in the given string.,Mathematics,"['Mathematics', 'Strings']",Full baseline,correct,
+248,none,0.8872045874595642,0.1127953976392746,Yes,95,True,Write a function that takes in an integer n and calculates the harmonic sum of n-1.,Mathematics,['Mathematics'],Full baseline,correct,
+249,none,0.8840392827987671,0.11596070975065231,Yes,128,True,Write a function to find the intersection of two arrays.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+250,none,0.9219217896461487,0.07807815819978714,Yes,128,True,Write a python function that takes in a tuple and an element and counts the occcurences of the element in the tuple.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+251,none,0.8080672025680542,0.1919327974319458,Yes,98,True,"Write a function that takes in a list and an element and inserts the element before each element in the list, and returns the resulting list.",Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+252,none,0.8807970285415649,0.11920291930437088,Yes,87,True,Write a python function to convert complex numbers to polar coordinates.,Mathematics,['Mathematics'],Full baseline,correct,
+253,none,0.9441768527030945,0.05582313984632492,Yes,129,True,Write a python function that returns the number of integer elements in a given list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+255,none,0.9124361872673035,0.08756384998559952,Yes,136,True,"Write a function that takes in a list and length n, and generates all combinations (with repetition) of the elements of the list and returns a list with a tuple for each combination.",Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+256,none,0.8807970285415649,0.11920291930437088,Yes,238,True,Write a python function that takes in a non-negative number and returns the number of prime numbers less than the given non-negative number.,Mathematics,['Mathematics'],Full baseline,correct,
+257,none,0.9019206762313843,0.09807932376861572,Yes,63,True,Write a function that takes in two numbers and returns a tuple with the second number and then the first number.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+259,none,0.8438951373100281,0.1561049073934555,Yes,167,True,Write a function to maximize the given two tuples.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+260,none,0.7690802216529846,0.230919748544693,Yes,109,True,Write a function to find the nth newman–shanks–williams prime number.,Mathematics,['Mathematics'],Full baseline,correct,
+261,none,0.896251380443573,0.1037486270070076,Yes,132,True,Write a function that takes in two tuples and performs mathematical division operation element-wise across the given tuples.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+262,none,0.9324532747268677,0.06754669547080994,Yes,62,True,"Write a function that takes in a list and an integer L and splits the given list into two parts where the length of the first part of the list is L, and returns the resulting lists in a tuple.",Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+264,none,0.9005298018455505,0.09947021305561066,Yes,134,True,Write a function to calculate a dog's age in dog's years.,Other,['Other'],Full baseline,correct,
+265,none,0.9136765599250793,0.08632348477840424,Yes,69,True,"Write a function that takes in a list and an integer n and splits a list for every nth element, returning a list of the resulting lists.",Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+266,none,0.9353464841842651,0.06465348601341248,Yes,60,True,Write a function to find the lateral surface area of a cube given its side length.,Other,['Other'],Full baseline,correct,
+267,none,0.9086179733276367,0.09138210862874985,Yes,51,True,Write a python function that takes in an integer n and returns the sum of the squares of the first n odd natural numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+268,none,0.9032942056655884,0.09670579433441162,Yes,53,True,Write a function to find the n'th star number.,Mathematics,['Mathematics'],Full baseline,correct,
+269,none,0.9416541457176208,0.05834583565592766,Yes,43,True,Write a function to find the ascii value of a character.,Strings,['Strings'],Full baseline,correct,
+270,none,0.9184802770614624,0.08151975274085999,Yes,168,True,Write a python function to find the sum of even numbers at even positions of a list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+271,none,0.8757869601249695,0.12421300262212753,Yes,134,True,Write a python function that takes in an integer n and finds the sum of the first n even natural numbers that are raised to the fifth power.,Mathematics,['Mathematics'],Full baseline,correct,
+272,none,0.9149009585380554,0.08509904146194458,Yes,83,True,Write a function that takes in a list of tuples and returns a list containing the rear element of each tuple.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+273,none,0.9086179733276367,0.09138210862874985,Yes,122,True,Write a function that takes in two tuples and subtracts the elements of the first tuple by the elements of the second tuple with the same index.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+274,none,0.851952850818634,0.14804719388484955,Yes,74,True,Write a python function that takes in a positive integer n and finds the sum of even index binomial coefficients.,Mathematics,['Mathematics'],Full baseline,correct,
+276,none,0.9124361872673035,0.08756384998559952,Yes,63,True,Write a function that takes in the radius and height of a cylinder and returns the the volume.,Other,['Other'],Full baseline,correct,
+277,none,0.9273632764816284,0.07263670116662979,Yes,107,True,Write a function that takes in a dictionary and integer n and filters the dictionary to only include entries with values greater than or equal to n.,Mathematics,['Mathematics'],Full baseline,correct,
+278,none,0.8354835510253906,0.16451644897460938,Yes,137,True,Write a function to find the number of elements that occurs before the tuple element in the given tuple.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+279,none,0.6992543935775757,0.30074557662010193,Yes,52,True,Write a function to find the nth decagonal number.,Mathematics,['Mathematics'],Full baseline,correct,
+280,none,0.9099069833755493,0.09009299427270889,Yes,225,True,Write a function that takes in an array and element and returns a tuple containing a boolean that indicates if the element is in the array and the index position of the element (or -1 if the element is not found).,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+281,none,0.8976953029632568,0.10230470448732376,Yes,108,True,Write a python function to check if the elements of a given list are unique or not.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+282,none,0.8872045874595642,0.1127953976392746,Yes,97,True,Write a function to subtract two lists element-wise.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+283,none,0.8740772008895874,0.1259227693080902,Yes,267,True,Write a python function takes in an integer and check whether the frequency of each digit in the integer is less than or equal to the digit itself.,Mathematics,['Mathematics'],Full baseline,correct,
+284,none,0.8824278712272644,0.11757213622331619,Yes,102,True,Write a function that takes in a list and element and checks whether all items in the list are equal to the given element.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+285,none,0.8887587189674377,0.11124120652675629,Yes,180,True,Write a function that checks whether a string contains the 'a' character followed by two or three 'b' characters.,Strings,['Strings'],Full baseline,correct,
+286,none,0.8887587189674377,0.11124120652675629,Yes,299,True,Write a function to find the largest sum of a contiguous array in the modified array which is formed by repeating the given array k times.,Lists / Arrays,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+287,none,0.894789457321167,0.10521053522825241,Yes,56,True,Write a python function takes in an integer n and returns the sum of squares of first n even natural numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+290,none,0.7634837031364441,0.23651622235774994,Yes,144,True,Write a function to find the list of maximum length in a list of lists.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+291,none,0.9136765599250793,0.08632348477840424,Yes,200,True,Write a function to find out the number of ways of painting the fence such that at most 2 adjacent posts have the same color for the given fence with n posts and k colors.,Mathematics,['Mathematics'],Full baseline,correct,
+292,none,0.9196425676345825,0.08035746961832047,Yes,45,True,Write a python function to find quotient of two numbers (rounded down to the nearest integer).,Mathematics,['Mathematics'],Full baseline,correct,
+293,none,0.8652240633964539,0.13477592170238495,Yes,80,True,Write a function to find the third side of a right angled triangle.,Other,['Other'],Full baseline,correct,
+294,none,0.8539127111434937,0.14608724415302277,Yes,104,True,Write a function to find the maximum value in a given heterogeneous list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+295,none,0.9111796617507935,0.08882028609514236,Yes,154,True,Write a function to return the sum of all divisors of a number.,Mathematics,['Mathematics'],Full baseline,correct,
+296,none,0.8615382313728333,0.13846179842948914,Yes,203,True,Write a python function to count inversions in an array.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+297,none,0.8872045874595642,0.1127953976392746,Yes,388,True,Write a function to flatten a given nested list structure.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+299,none,0.8723474144935608,0.1276526302099228,Yes,198,True,Write a function to calculate the maximum aggregate from the list of tuples.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+300,none,0.859663724899292,0.14033624529838562,Yes,137,True,Write a function to find the count of all binary sequences of length 2n such that sum of first n bits is same as sum of last n bits.,Mathematics,"['Mathematics', 'Algorithms']",Full baseline,correct,
+301,none,0.8991213440895081,0.10087861120700836,Yes,125,True,Write a function to find the depth of a dictionary.,Other,['Other'],Full baseline,correct,
+304,none,0.837619960308075,0.16238002479076385,Yes,343,True,Write a python function to find element at a given index after number of rotations.,Mathematics,['Mathematics'],Full baseline,correct,
+305,none,0.8031737804412842,0.19682620465755463,Yes,136,True,Write a function to return two words from a list of words starting with letter 'p'.,Strings,"['Strings', 'Lists / Arrays']",Full baseline,correct,
+306,none,0.8056321740150452,0.19436782598495483,Yes,438,True,"Write a function to find the maximum sum of increasing subsequence from prefix until ith index and also including a given kth element which is after i, i.e., k > i .",Mathematics,['Mathematics'],Full baseline,correct,
+307,none,0.7799928784370422,0.22000709176063538,Yes,139,True,Write a function to get a colon of a tuple.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+308,none,0.9046505093574524,0.09534946084022522,Yes,128,True,"Write a function to find the specified number of largest products from two given lists, selecting one factor from each list.",Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+309,none,0.9539660811424255,0.04603390023112297,Yes,83,True,Write a python function to find the maximum of two numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+310,none,0.907312273979187,0.09268777817487717,Yes,100,True,Write a function to convert a given string to a tuple of characters.,Strings,"['Strings', 'Lists / Arrays']",Full baseline,correct,
+311,none,0.8539127111434937,0.14608724415302277,Yes,244,True,Write a python function to set the left most unset bit.,Other,['Other'],Full baseline,correct,
+312,none,0.9263036847114563,0.07369627058506012,Yes,90,True,Write a function to find the volume of a cone.,Other,['Other'],Full baseline,correct,
+388,none,0.9099069833755493,0.09009299427270889,Yes,161,True,Write a python function to find the highest power of 2 that is less than or equal to n.,Other,['Other'],Full baseline,correct,
+389,none,0.9099069833755493,0.09009299427270889,Yes,118,True,Write a function to find the n'th lucas number.,Mathematics,['Mathematics'],Full baseline,correct,
+390,none,0.8006919622421265,0.19930800795555115,Yes,96,True,Write a function to apply a given format string to all of the elements in a list.,Strings,"['Strings', 'Lists / Arrays']",Full baseline,correct,
+391,none,0.8459424376487732,0.1540575623512268,Yes,120,True,Write a function to convert more than one list to nested dictionary.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+392,none,0.7905303239822388,0.20946969091892242,Yes,228,True,"Write a function to find the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).",Other,['Mathematics'],Full baseline,correct,
+393,none,0.8824278712272644,0.11757213622331619,Yes,177,True,Write a function to find the list with maximum length.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+394,none,0.9124361872673035,0.08756384998559952,Yes,162,True,Write a function to check if given tuple contains no duplicates.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+395,none,0.8902942538261414,0.10970577597618103,Yes,248,True,Write a python function to find the first non-repeated character in a given string.,Strings,['Strings'],Full baseline,correct,
+396,none,0.8670357465744019,0.13296423852443695,Yes,147,True,Write a function to check whether the given string starts and ends with the same character or not.,Strings,['Strings'],Full baseline,correct,
+397,none,0.859663724899292,0.14033624529838562,Yes,253,True,Write a function to find the median of three numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+398,none,0.896251380443573,0.1037486270070076,Yes,95,True,Write a function to compute the sum of digits of each number of a given list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+399,none,0.9252299070358276,0.07477004081010818,Yes,125,True,Write a function to perform the mathematical bitwise xor operation across the given tuples.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+400,none,0.8438951373100281,0.1561049073934555,Yes,107,True,Write a function to extract the number of unique tuples in the given list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+401,none,0.8976953029632568,0.10230470448732376,Yes,163,True,Write a function to perform index wise addition of tuple elements in the given two nested tuples.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+404,none,0.9504110217094421,0.04958902671933174,Yes,83,True,Write a python function to find the minimum of two numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+405,none,0.907312273979187,0.09268777817487717,Yes,98,True,Write a function to check whether an element exists within a tuple.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+406,none,0.894789457321167,0.10521053522825241,Yes,190,True,Write a python function to find whether the parity of a given number is odd.,Mathematics,['Mathematics'],Full baseline,correct,
+407,none,0.8499711751937866,0.15002882480621338,Yes,326,True,Write a function to create the next bigger number by rearranging the digits of a given number.,Mathematics,['Mathematics'],Full baseline,correct,
+408,none,0.8991213440895081,0.10087861120700836,Yes,416,True,Write a function to find k number of smallest pairs which consist of one element from the first array and one element from the second array.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+409,none,0.8418256044387817,0.15817435085773468,Yes,105,True,Write a function to find the minimum product from the pairs of tuples within a given list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+410,none,0.8311430811882019,0.16885696351528168,Yes,102,True,Write a function to find the minimum value in a given heterogeneous list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+411,none,0.9219217896461487,0.07807815819978714,Yes,100,True,Write a function to convert the given snake case string to camel case string.,Strings,['Strings'],Full baseline,correct,
+412,none,0.8056321740150452,0.19436782598495483,Yes,94,True,Write a python function to remove odd numbers from a given list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+413,none,0.9046505093574524,0.09534946084022522,Yes,87,True,Write a function to extract the nth element from a given list of tuples.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+414,none,0.8499711751937866,0.15002882480621338,Yes,183,True,Write a python function to check whether any value in a sequence exists in a sequence or not.,Mathematics,['Mathematics'],Full baseline,correct,
+415,none,0.8705973029136658,0.12940272688865662,Yes,322,True,Write a python function to find a pair with highest product from a given array of integers.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+417,none,0.8175744414329529,0.18242551386356354,Yes,201,True,Write a function to find common first element in given list of tuple.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+418,none,0.8397339582443237,0.16026602685451508,Yes,75,True,Write a python function to find the element of a list having maximum length.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+419,none,0.8175744414329529,0.18242551386356354,Yes,120,True,Write a function to round every number of a given list of numbers and print the total sum multiplied by the length of the list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+420,none,0.8791467547416687,0.1208532303571701,Yes,108,True,Write a python function to find the cube sum of first n even natural numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+421,none,0.8740772008895874,0.1259227693080902,Yes,169,True,Write a function to concatenate each element of tuple by the delimiter.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+422,none,0.9161096215248108,0.0838903859257698,Yes,130,True,Write a python function to find the average of cubes of first n natural numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+424,none,0.8740772008895874,0.1259227693080902,Yes,99,True,Write a function to extract only the rear index element of each string in the given tuple.,Strings,"['Strings', 'Lists / Arrays']",Full baseline,correct,
+425,none,0.9124361872673035,0.08756384998559952,Yes,154,True,Write a function to count the number of sublists containing a particular element.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+426,none,0.9184802770614624,0.08151975274085999,Yes,96,True,Write a function to filter odd numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+427,none,0.9019206762313843,0.09807932376861572,Yes,110,True,Write a function to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.,Other,['Other'],Full baseline,correct,
+428,none,0.9273632764816284,0.07263670116662979,Yes,381,True,Write a function to sort the given array by using shell sort.,Lists / Arrays,"['Lists / Arrays', 'Algorithms']",Full baseline,correct,
+429,none,0.8652240633964539,0.13477592170238495,Yes,124,True,Write a function to extract the elementwise and tuples from the given two tuples.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+430,none,0.7549149990081787,0.24508501589298248,Yes,100,True,Write a function to find the directrix of a parabola.,Other,['Other'],Full baseline,correct,
+431,none,0.8740772008895874,0.1259227693080902,Yes,185,True,Write a function that takes two lists and returns true if they have at least one common element.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+432,none,0.9032942056655884,0.09670579433441162,Yes,87,True,Write a function to find the median length of a trapezium.,Other,['Other'],Full baseline,correct,
+433,none,0.8104788661003113,0.18952108919620514,Yes,70,True,Write a function to check whether the entered number is greater than the elements of the given array.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+434,none,0.851952850818634,0.14804719388484955,Yes,172,True,Write a function that matches a string that has an a followed by one or more b's.,Strings,['Strings'],Full baseline,correct,
+435,none,0.9511421918869019,0.04885777831077576,Yes,40,True,Write a python function to find the last digit of a given number.,Mathematics,['Mathematics'],Full baseline,correct,
+436,none,0.9161096215248108,0.0838903859257698,Yes,104,True,Write a python function to return the negative numbers in a list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+437,none,0.8652240633964539,0.13477592170238495,Yes,134,True,Write a function to remove odd characters in a string.,Strings,['Strings'],Full baseline,correct,
+438,none,0.8267117738723755,0.17328819632530212,Yes,256,True,Write a function to count bidirectional tuple pairs.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+439,none,0.8872045874595642,0.1127953976392746,Yes,69,True,Write a function to join a list of multiple integers into a single integer.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+440,none,0.8418256044387817,0.15817435085773468,Yes,124,True,Write a function to find the first adverb and their positions in a given sentence.,Other,['Other'],Full baseline,correct,
+441,none,0.929440438747406,0.07055959850549698,Yes,66,True,Write a function to find the surface area of a cube of a given size.,Other,['Other'],Full baseline,correct,
+442,none,0.8459424376487732,0.1540575623512268,Yes,189,True,Write a function to find the ration of positive numbers in an array of integers.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+443,none,0.8688268065452576,0.13117322325706482,Yes,125,True,Write a python function to find the largest negative number from the given list.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+444,none,0.793105959892273,0.20689405500888824,Yes,145,True,Write a function to trim each tuple by k in the given tuple list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+445,none,0.8740772008895874,0.1259227693080902,Yes,166,True,Write a function to perform index wise multiplication of tuple elements in the given two tuples.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+446,none,0.851952850818634,0.14804719388484955,Yes,168,True,Write a python function to count the occurence of all elements of list in a tuple.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+447,none,0.9284088015556335,0.07159119844436646,Yes,85,True,Write a function to find cubes of individual elements in a list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+448,none,0.8459424376487732,0.1540575623512268,Yes,220,True,Write a function to calculate the sum of perrin numbers.,Mathematics,['Mathematics'],Full baseline,correct,
+450,none,0.894789457321167,0.10521053522825241,Yes,91,True,Write a function to extract specified size of strings from a given list of string values.,Strings,"['Strings', 'Lists / Arrays']",Full baseline,correct,
+451,none,0.907312273979187,0.09268777817487717,Yes,76,True,Write a function to remove all whitespaces from the given string.,Strings,['Strings'],Full baseline,correct,
+452,none,0.8757869601249695,0.12421300262212753,Yes,153,True,Write a function that gives loss amount on a sale if the given amount has loss else return 0.,Other,['Other'],Full baseline,correct,
+453,none,0.8824278712272644,0.11757213622331619,Yes,533,True,Write a python function to find the sum of even factors of a number.,Mathematics,['Mathematics'],Full baseline,correct,
+454,none,0.8774768114089966,0.12252321094274521,Yes,177,True,Write a function that matches a word containing 'z'.,Strings,['Strings'],Full baseline,correct,
+455,none,0.8976953029632568,0.10230470448732376,Yes,197,True,Write a function to check whether the given month number contains 31 days or not.,Mathematics,['Mathematics'],Full baseline,correct,
+456,none,0.9353464841842651,0.06465348601341248,Yes,97,True,Write a function to reverse each string in a given list of string values.,Strings,"['Strings', 'Lists / Arrays']",Full baseline,correct,
+457,none,0.9019206762313843,0.09807932376861572,Yes,49,True,Write a python function to find the sublist having minimum length.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+458,none,0.937210738658905,0.0627892017364502,Yes,49,True,Write a function to find the area of a rectangle.,Other,['Other'],Full baseline,correct,
+459,none,0.8688268065452576,0.13117322325706482,Yes,72,True,Write a function to remove uppercase substrings from a given string.,Strings,['Strings'],Full baseline,correct,
+460,none,0.9230391979217529,0.07696083933115005,Yes,56,True,Write a python function to get the first element of each sublist.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+461,none,0.8688268065452576,0.13117322325706482,Yes,155,True,Write a python function to count the upper case characters in a given string.,Strings,['Strings'],Full baseline,correct,
+462,none,0.8175744414329529,0.18242551386356354,Yes,189,True,Write a function to find all possible combinations of the elements of a given list.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+463,none,0.8333246111869812,0.16667540371418,Yes,589,True,Write a function to find the maximum product subarray of the given array.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+464,none,0.8688268065452576,0.13117322325706482,Yes,92,True,Write a function to check if all values are same in a dictionary.,Other,['Other'],Full baseline,correct,
+465,none,0.8872045874595642,0.1127953976392746,Yes,114,True,Write a function to drop empty items from a given dictionary.,Other,['Other'],Full baseline,correct,
+468,none,0.8499711751937866,0.15002882480621338,Yes,306,True,Write a function to find the maximum product formed by multiplying numbers of an increasing subsequence of that array.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+470,none,0.9252299070358276,0.07477004081010818,Yes,104,True,Write a function to find the pairwise addition of the neighboring elements of the given tuple.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+471,none,0.8918110132217407,0.10818894952535629,Yes,132,True,Write a python function to find the product of the array multiplication modulo n.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+472,none,0.894789457321167,0.10521053522825241,Yes,80,True,Write a python function to check whether the given list contains consecutive numbers or not.,Mathematics,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+473,none,0.8840392827987671,0.11596070975065231,Yes,168,True,Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order.,Lists / Arrays,['Lists / Arrays'],Full baseline,correct,
+474,none,0.9111796617507935,0.08882028609514236,Yes,77,True,Write a function to replace characters in a string.,Strings,['Strings'],Full baseline,correct,
+475,none,0.8244618773460388,0.1755380630493164,Yes,127,True,Write a function to sort a dictionary by value.,Algorithms,['Algorithms'],Full baseline,correct,
+476,none,0.9005298018455505,0.09947021305561066,Yes,66,True,Write a python function to find the sum of the largest and smallest value in a given array.,Lists / Arrays,"['Mathematics', 'Lists / Arrays']",Full baseline,correct,
+477,none,0.8976953029632568,0.10230470448732376,Yes,47,True,Write a python function to convert the given string to lower case.,Strings,['Strings'],Full baseline,correct,
+478,none,0.8705973029136658,0.12940272688865662,Yes,71,True,Write a function to remove lowercase substrings from a given string.,Strings,['Strings'],Full baseline,correct,
+479,none,0.9059898257255554,0.09401018917560577,Yes,82,True,Write a python function to find the first digit of a given number.,Mathematics,['Mathematics'],Full baseline,correct,
+11,none,0.8104788661003113,0.18952108919620514,Yes,269,True,,,,Comment experiment,correct,True
+11,accurate,0.8267117738723755,0.17328819632530212,Yes,269,True,,,,Comment experiment,correct,True
+11,misleading,0.7905303239822388,0.20946969091892242,Yes,269,True,,,,Comment experiment,correct,True
+12,none,0.9111796617507935,0.08882028609514236,Yes,69,True,,,,Comment experiment,correct,True
+12,accurate,0.9219217896461487,0.07807815819978714,Yes,69,True,,,,Comment experiment,correct,True
+12,misleading,0.8438951373100281,0.1561049073934555,Yes,69,True,,,,Comment experiment,correct,True
+14,none,0.8688268065452576,0.13117322325706482,Yes,55,True,,,,Comment experiment,correct,True
+14,accurate,0.8872045874595642,0.1127953976392746,Yes,55,True,,,,Comment experiment,correct,True
+14,misleading,0.8289388418197632,0.1710611879825592,Yes,55,True,,,,Comment experiment,correct,True
+16,none,0.8824278712272644,0.11757213622331619,Yes,193,True,,,,Comment experiment,correct,True
+16,accurate,0.8887587189674377,0.11124120652675629,Yes,193,True,,,,Comment experiment,correct,True
+16,misleading,0.8289388418197632,0.1710611879825592,Yes,193,True,,,,Comment experiment,correct,True
+17,none,0.9458011984825134,0.0541987270116806,Yes,59,True,,,,Comment experiment,correct,True
+17,accurate,0.9441768527030945,0.05582313984632492,Yes,59,True,,,,Comment experiment,correct,True
+17,misleading,0.9019206762313843,0.09807932376861572,Yes,59,True,,,,Comment experiment,correct,True
+18,none,0.8438951373100281,0.1561049073934555,Yes,639,True,,,,Comment experiment,correct,True
+18,accurate,0.8558511734008789,0.14414885640144348,Yes,639,True,,,,Comment experiment,correct,True
+18,misleading,0.8499711751937866,0.15002882480621338,Yes,639,True,,,,Comment experiment,correct,True
+19,none,0.8807970285415649,0.11920291930437088,Yes,112,True,,,,Comment experiment,correct,True
+19,accurate,0.8807970285415649,0.11920291930437088,Yes,112,True,,,,Comment experiment,correct,True
+19,misleading,0.8652240633964539,0.13477592170238495,Yes,112,True,,,,Comment experiment,correct,True
+20,none,0.8221890926361084,0.17781086266040802,Yes,190,True,,,,Comment experiment,correct,True
+20,accurate,0.837619960308075,0.16238002479076385,Yes,190,True,,,,Comment experiment,correct,True
+20,misleading,0.709019124507904,0.29098084568977356,Yes,190,True,,,,Comment experiment,correct,True
+56,none,0.894789457321167,0.10521053522825241,Yes,201,True,,,,Comment experiment,correct,True
+56,accurate,0.8933094143867493,0.10669060051441193,Yes,201,True,,,,Comment experiment,correct,True
+56,misleading,0.8840392827987671,0.11596070975065231,Yes,201,True,,,,Comment experiment,correct,True
+57,none,0.9046505093574524,0.09534946084022522,Yes,165,True,,,,Comment experiment,correct,True
+57,accurate,0.9046505093574524,0.09534946084022522,Yes,165,True,,,,Comment experiment,correct,True
+57,misleading,0.8633915781974792,0.13660839200019836,Yes,165,True,,,,Comment experiment,correct,True
+58,none,0.9111796617507935,0.08882028609514236,Yes,52,True,,,,Comment experiment,correct,True
+58,accurate,0.9184802770614624,0.08151975274085999,Yes,52,True,,,,Comment experiment,correct,True
+58,misleading,0.8539127111434937,0.14608724415302277,Yes,52,True,,,,Comment experiment,correct,True
+62,none,0.9458011984825134,0.0541987270116806,Yes,39,True,,,,Comment experiment,correct,True
+62,accurate,0.9489172697067261,0.05108273774385452,Yes,39,True,,,,Comment experiment,correct,True
+62,misleading,0.8128673434257507,0.18713268637657166,Yes,39,True,,,,Comment experiment,correct,True
+63,none,0.8807970285415649,0.11920291930437088,Yes,108,True,,,,Comment experiment,correct,True
+63,accurate,0.9019206762313843,0.09807932376861572,Yes,108,True,,,,Comment experiment,correct,True
+63,misleading,0.8397339582443237,0.16026602685451508,Yes,108,True,,,,Comment experiment,correct,True
+64,none,0.9449946880340576,0.055005282163619995,Yes,187,True,,,,Comment experiment,correct,True
+64,accurate,0.949669361114502,0.05033063143491745,Yes,187,True,,,,Comment experiment,correct,True
+64,misleading,0.709019124507904,0.29098084568977356,Yes,187,True,,,,Comment experiment,correct,True
+67,none,0.859663724899292,0.14033624529838562,Yes,280,True,,,,Comment experiment,correct,True
+67,accurate,0.8791467547416687,0.1208532303571701,Yes,280,True,,,,Comment experiment,correct,True
+67,misleading,0.8397339582443237,0.16026602685451508,Yes,280,True,,,,Comment experiment,correct,True
+69,none,0.859663724899292,0.14033624529838562,Yes,320,True,,,,Comment experiment,correct,True
+69,accurate,0.8774768114089966,0.12252321094274521,Yes,320,True,,,,Comment experiment,correct,True
+69,misleading,0.851952850818634,0.14804719388484955,Yes,320,True,,,,Comment experiment,correct,True
+70,none,0.859663724899292,0.14033624529838562,Yes,226,True,,,,Comment experiment,correct,True
+70,accurate,0.859663724899292,0.14033624529838562,Yes,226,True,,,,Comment experiment,correct,True
+70,misleading,0.8333246111869812,0.16667540371418,Yes,226,True,,,,Comment experiment,correct,True
+87,none,0.9032942056655884,0.09670579433441162,Yes,155,True,,,,Comment experiment,correct,True
+87,accurate,0.9019206762313843,0.09807932376861572,Yes,155,True,,,,Comment experiment,correct,True
+87,misleading,0.8774768114089966,0.12252321094274521,Yes,155,True,,,,Comment experiment,correct,True
+88,none,0.9433475732803345,0.05665242671966553,Yes,102,True,,,,Comment experiment,correct,True
+88,accurate,0.9465966820716858,0.0534033328294754,Yes,102,True,,,,Comment experiment,correct,True
+88,misleading,0.9230391979217529,0.07696083933115005,Yes,102,True,,,,Comment experiment,correct,True
+89,none,0.8080672025680542,0.1919327974319458,Yes,36,True,,,,Comment experiment,correct,True
+89,accurate,0.8539127111434937,0.14608724415302277,Yes,36,True,,,,Comment experiment,correct,True
+89,misleading,0.6406359076499939,0.3593641519546509,Yes,36,True,,,,Comment experiment,correct,True
+62,none,0.9458011984825134,0.0541987270116806,Yes,39,True,,,,Bug controls,correct,True
+62,accurate,0.9407896995544434,0.05921025201678276,Yes,39,True,,,,Bug controls,correct,True
+62,misleading,0.8080672025680542,0.1919327974319458,Yes,39,True,,,,Bug controls,correct,True
+62,none,0.4532618820667267,0.5467381477355957,No,39,False,,,,Bug controls,buggy,True
+62,accurate,0.6297746300697327,0.37022536993026733,Yes,39,False,,,,Bug controls,buggy,False
+62,misleading,0.5,0.5,Yes,39,False,,,,Bug controls,buggy,False
+17,none,0.9458011984825134,0.0541987270116806,Yes,59,True,,,,Bug controls,correct,True
+17,accurate,0.9284088015556335,0.07159119844436646,Yes,59,True,,,,Bug controls,correct,True
+17,misleading,0.859663724899292,0.14033624529838562,Yes,59,True,,,,Bug controls,correct,True
+17,none,0.8918110132217407,0.10818894952535629,Yes,59,False,,,,Bug controls,buggy,False
+17,accurate,0.8244618773460388,0.1755380630493164,Yes,59,False,,,,Bug controls,buggy,False
+17,misleading,0.8397339582443237,0.16026602685451508,Yes,59,False,,,,Bug controls,buggy,False
+12,none,0.9111796617507935,0.08882028609514236,Yes,69,True,,,,Bug controls,correct,True
+12,accurate,0.9184802770614624,0.08151975274085999,Yes,69,True,,,,Bug controls,correct,True
+12,misleading,0.8459424376487732,0.1540575623512268,Yes,69,True,,,,Bug controls,correct,True
+12,none,0.8652240633964539,0.13477592170238495,Yes,83,False,,,,Bug controls,buggy,False
+12,accurate,0.8633915781974792,0.13660839200019836,Yes,83,False,,,,Bug controls,buggy,False
+12,misleading,0.8740772008895874,0.1259227693080902,Yes,83,False,,,,Bug controls,buggy,False

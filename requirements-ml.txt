@@ -1,0 +1,8 @@
+# Optional: only needed to regenerate dashboard/code_projection.csv
+# (scripts/build_code_projection.py). The dashboard itself does not need these.
+# Install the CPU build of PyTorch first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+-r requirements.txt
+torch
+transformers
+umap-learn

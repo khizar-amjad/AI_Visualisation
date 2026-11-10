@@ -1,0 +1,33 @@
+# Python virtual environments
+.venv/
+.venv_old/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# ML models and cache
+models/
+checkpoints/
+.cache/
+*.safetensors
+*.pt
+*.pth
+
+# Temporary files
+*.log
+*.tmp
