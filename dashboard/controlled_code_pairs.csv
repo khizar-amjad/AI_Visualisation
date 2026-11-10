@@ -1,0 +1,2229 @@
+problem_id,correct_code,buggy_code,bug_type,source,different_ast
+11,"def remove_Occ(s, ch):
+    for i in range(len(s)):
+        if s[i] == ch:
+            s = s[0:i] + s[i + 1:]
+            break
+    for i in range(len(s) - 1, -1, -1):
+        if s[i] == ch:
+            s = s[0:i] + s[i + 1:]
+            break
+    return s","def remove_Occ(s, ch):
+    for i in range(len(s)):
+        if s[i] != ch:
+            s = s[0:i] + s[i + 1:]
+            break
+    for i in range(len(s) - 1, -1, -1):
+        if s[i] == ch:
+            s = s[0:i] + s[i + 1:]
+            break
+    return s",Eq_to_NotEq,expanded_mutator,True
+14,"def find_Volume(l, b, h):
+    return l * b * h / 2","def find_Volume(l, b, h):
+    return l / b * h / 2",Mult_to_Div,expanded_mutator,True
+17,"def square_perimeter(a):
+    perimeter = 4 * a
+    return perimeter","def square_perimeter(a):
+    perimeter = 4 / a
+    return perimeter",Mult_to_Div,expanded_mutator,True
+18,"NO_OF_CHARS = 256
+
+def str_to_list(string):
+    temp = []
+    for x in string:
+        temp.append(x)
+    return temp
+
+def lst_to_string(List):
+    return ''.join(List)
+
+def get_char_count_array(string):
+    count = [0] * NO_OF_CHARS
+    for i in string:
+        count[ord(i)] += 1
+    return count
+
+def remove_dirty_chars(string, second_string):
+    count = get_char_count_array(second_string)
+    ip_ind = 0
+    res_ind = 0
+    temp = ''
+    str_list = str_to_list(string)
+    while ip_ind != len(str_list):
+        temp = str_list[ip_ind]
+        if count[ord(temp)] == 0:
+            str_list[res_ind] = str_list[ip_ind]
+            res_ind += 1
+        ip_ind += 1
+    return lst_to_string(str_list[0:res_ind])","NO_OF_CHARS = 256
+
+def str_to_list(string):
+    temp = []
+    for x in string:
+        temp.append(x)
+    return temp
+
+def lst_to_string(List):
+    return ''.join(List)
+
+def get_char_count_array(string):
+    count = [0] * NO_OF_CHARS
+    for i in string:
+        count[ord(i)] += 1
+    return count
+
+def remove_dirty_chars(string, second_string):
+    count = get_char_count_array(second_string)
+    ip_ind = 0
+    res_ind = 0
+    temp = ''
+    str_list = str_to_list(string)
+    while ip_ind == len(str_list):
+        temp = str_list[ip_ind]
+        if count[ord(temp)] == 0:
+            str_list[res_ind] = str_list[ip_ind]
+            res_ind += 1
+        ip_ind += 1
+    return lst_to_string(str_list[0:res_ind])",NotEq_to_Eq,expanded_mutator,True
+19,"def test_duplicate(arraynums):
+    nums_set = set(arraynums)
+    return len(arraynums) != len(nums_set)","def test_duplicate(arraynums):
+    nums_set = set(arraynums)
+    return len(arraynums) == len(nums_set)",NotEq_to_Eq,expanded_mutator,True
+20,"def is_woodall(x):
+    if x % 2 == 0:
+        return False
+    if x == 1:
+        return True
+    x = x + 1
+    p = 0
+    while x % 2 == 0:
+        x = x / 2
+        p = p + 1
+        if p == x:
+            return True
+    return False","def is_woodall(x):
+    if x % 2 != 0:
+        return False
+    if x == 1:
+        return True
+    x = x + 1
+    p = 0
+    while x % 2 == 0:
+        x = x / 2
+        p = p + 1
+        if p == x:
+            return True
+    return False",Eq_to_NotEq,expanded_mutator,True
+56,"def rev(num):
+    rev_num = 0
+    while num > 0:
+        rev_num = rev_num * 10 + num % 10
+        num = num // 10
+    return rev_num
+
+def check(n):
+    return 2 * rev(n) == n + 1","def rev(num):
+    rev_num = 0
+    while num < 0:
+        rev_num = rev_num * 10 + num % 10
+        num = num // 10
+    return rev_num
+
+def check(n):
+    return 2 * rev(n) == n + 1",Gt_to_Lt,original_mutator,True
+57,"def find_Max_Num(arr):
+    n = len(arr)
+    arr.sort(reverse=True)
+    num = arr[0]
+    for i in range(1, n):
+        num = num * 10 + arr[i]
+    return num","def find_Max_Num(arr):
+    n = len(arr)
+    arr.sort(reverse=True)
+    num = arr[0]
+    for i in range(1, n):
+        num = num / 10 + arr[i]
+    return num",Mult_to_Div,expanded_mutator,True
+58,"def opposite_Signs(x, y):
+    return x ^ y < 0","def opposite_Signs(x, y):
+    return x ^ y > 0",Lt_to_Gt,original_mutator,True
+59,"def is_octagonal(n):
+    return 3 * n * n - 2 * n","def is_octagonal(n):
+    return 3 / n * n - 2 * n",Mult_to_Div,expanded_mutator,True
+61,"from collections import defaultdict
+
+def count_Substrings(s):
+    n = len(s)
+    count, sum = (0, 0)
+    mp = defaultdict(lambda: 0)
+    mp[0] += 1
+    for i in range(n):
+        sum += ord(s[i]) - ord('0')
+        count += mp[sum - (i + 1)]
+        mp[sum - (i + 1)] += 1
+    return count","from collections import defaultdict
+
+def count_Substrings(s):
+    n = len(s)
+    count, sum = (0, 0)
+    mp = defaultdict(lambda: 0)
+    mp[0] += 1
+    for i in range(n):
+        sum += ord(s[i]) + ord('0')
+        count += mp[sum - (i + 1)]
+        mp[sum - (i + 1)] += 1
+    return count",Sub_to_Add,expanded_mutator,True
+62,"def smallest_num(xs):
+    return min(xs)","def smallest_num(xs):
+    return max(xs)",min_to_max,original_mutator,True
+63,"def max_difference(test_list):
+    temp = [abs(b - a) for a, b in test_list]
+    res = max(temp)
+    return res","def max_difference(test_list):
+    temp = [abs(b - a) for a, b in test_list]
+    res = min(temp)
+    return res",max_to_min,original_mutator,True
+65,"def recursive_list_sum(data_list):
+    total = 0
+    for element in data_list:
+        if type(element) == type([]):
+            total = total + recursive_list_sum(element)
+        else:
+            total = total + element
+    return total","def recursive_list_sum(data_list):
+    total = 0
+    for element in data_list:
+        if type(element) == type([]):
+            total = total - recursive_list_sum(element)
+        else:
+            total = total + element
+    return total",Add_to_Sub,expanded_mutator,True
+66,"def pos_count(list):
+    pos_count = 0
+    for num in list:
+        if num >= 0:
+            pos_count += 1
+    return pos_count","def pos_count(list):
+    pos_count = 0
+    for num in list:
+        if num <= 0:
+            pos_count += 1
+    return pos_count",GtE_to_LtE,original_mutator,True
+67,"def bell_number(n):
+    bell = [[0 for i in range(n + 1)] for j in range(n + 1)]
+    bell[0][0] = 1
+    for i in range(1, n + 1):
+        bell[i][0] = bell[i - 1][i - 1]
+        for j in range(1, i + 1):
+            bell[i][j] = bell[i - 1][j - 1] + bell[i][j - 1]
+    return bell[n][0]","def bell_number(n):
+    bell = [[0 for i in range(n + 1)] for j in range(n + 1)]
+    bell[0][0] = 1
+    for i in range(1, n - 1):
+        bell[i][0] = bell[i - 1][i - 1]
+        for j in range(1, i + 1):
+            bell[i][j] = bell[i - 1][j - 1] + bell[i][j - 1]
+    return bell[n][0]",Add_to_Sub,expanded_mutator,True
+68,"def is_Monotonic(A):
+    return all((A[i] <= A[i + 1] for i in range(len(A) - 1))) or all((A[i] >= A[i + 1] for i in range(len(A) - 1)))","def is_Monotonic(A):
+    return all((A[i] >= A[i + 1] for i in range(len(A) - 1))) or all((A[i] >= A[i + 1] for i in range(len(A) - 1)))",LtE_to_GtE,original_mutator,True
+69,"def is_sublist(l, s):
+    sub_set = False
+    if s == []:
+        sub_set = True
+    elif s == l:
+        sub_set = True
+    elif len(s) > len(l):
+        sub_set = False
+    else:
+        for i in range(len(l)):
+            if l[i] == s[0]:
+                n = 1
+                while n < len(s) and l[i + n] == s[n]:
+                    n += 1
+                if n == len(s):
+                    sub_set = True
+    return sub_set","def is_sublist(l, s):
+    sub_set = False
+    if s == []:
+        sub_set = True
+    elif s == l:
+        sub_set = True
+    elif len(s) < len(l):
+        sub_set = False
+    else:
+        for i in range(len(l)):
+            if l[i] == s[0]:
+                n = 1
+                while n < len(s) and l[i + n] == s[n]:
+                    n += 1
+                if n == len(s):
+                    sub_set = True
+    return sub_set",Gt_to_Lt,original_mutator,True
+70,"def find_equal_tuple(Input):
+    k = 0 if not Input else len(Input[0])
+    flag = 1
+    for tuple in Input:
+        if len(tuple) != k:
+            flag = 0
+            break
+    return flag
+
+def get_equal(Input):
+    return find_equal_tuple(Input) == 1","def find_equal_tuple(Input):
+    k = 0 if not Input else len(Input[0])
+    flag = 1
+    for tuple in Input:
+        if len(tuple) == k:
+            flag = 0
+            break
+    return flag
+
+def get_equal(Input):
+    return find_equal_tuple(Input) == 1",NotEq_to_Eq,expanded_mutator,True
+71,"def comb_sort(nums):
+    shrink_fact = 1.3
+    gaps = len(nums)
+    swapped = True
+    i = 0
+    while gaps > 1 or swapped:
+        gaps = int(float(gaps) / shrink_fact)
+        swapped = False
+        i = 0
+        while gaps + i < len(nums):
+            if nums[i] > nums[i + gaps]:
+                nums[i], nums[i + gaps] = (nums[i + gaps], nums[i])
+                swapped = True
+            i += 1
+    return nums","def comb_sort(nums):
+    shrink_fact = 1.3
+    gaps = len(nums)
+    swapped = True
+    i = 0
+    while gaps < 1 or swapped:
+        gaps = int(float(gaps) / shrink_fact)
+        swapped = False
+        i = 0
+        while gaps + i < len(nums):
+            if nums[i] > nums[i + gaps]:
+                nums[i], nums[i + gaps] = (nums[i + gaps], nums[i])
+                swapped = True
+            i += 1
+    return nums",Gt_to_Lt,original_mutator,True
+72,"def dif_Square(n):
+    if n % 4 != 2:
+        return True
+    return False","def dif_Square(n):
+    if n % 4 == 2:
+        return True
+    return False",NotEq_to_Eq,expanded_mutator,True
+74,"def is_samepatterns(colors, patterns):
+    if len(colors) != len(patterns):
+        return False
+    sdict = {}
+    pset = set()
+    sset = set()
+    for i in range(len(patterns)):
+        pset.add(patterns[i])
+        sset.add(colors[i])
+        if patterns[i] not in sdict.keys():
+            sdict[patterns[i]] = []
+        keys = sdict[patterns[i]]
+        keys.append(colors[i])
+        sdict[patterns[i]] = keys
+    if len(pset) != len(sset):
+        return False
+    for values in sdict.values():
+        for i in range(len(values) - 1):
+            if values[i] != values[i + 1]:
+                return False
+    return True","def is_samepatterns(colors, patterns):
+    if len(colors) == len(patterns):
+        return False
+    sdict = {}
+    pset = set()
+    sset = set()
+    for i in range(len(patterns)):
+        pset.add(patterns[i])
+        sset.add(colors[i])
+        if patterns[i] not in sdict.keys():
+            sdict[patterns[i]] = []
+        keys = sdict[patterns[i]]
+        keys.append(colors[i])
+        sdict[patterns[i]] = keys
+    if len(pset) != len(sset):
+        return False
+    for values in sdict.values():
+        for i in range(len(values) - 1):
+            if values[i] != values[i + 1]:
+                return False
+    return True",NotEq_to_Eq,expanded_mutator,True
+75,"def find_tuples(test_list, K):
+    res = [sub for sub in test_list if all((ele % K == 0 for ele in sub))]
+    return res","def find_tuples(test_list, K):
+    res = [sub for sub in test_list if all((ele % K != 0 for ele in sub))]
+    return res",Eq_to_NotEq,expanded_mutator,True
+77,"def is_Diff(n):
+    return n % 11 == 0","def is_Diff(n):
+    return n % 11 != 0",Eq_to_NotEq,expanded_mutator,True
+79,"def word_len(s):
+    s = s.split(' ')
+    for word in s:
+        if len(word) % 2 != 0:
+            return True
+        else:
+            return False","def word_len(s):
+    s = s.split(' ')
+    for word in s:
+        if len(word) % 2 == 0:
+            return True
+        else:
+            return False",NotEq_to_Eq,expanded_mutator,True
+80,"def tetrahedral_number(n):
+    return n * (n + 1) * (n + 2) / 6","def tetrahedral_number(n):
+    return n * (n - 1) * (n + 2) / 6",Add_to_Sub,expanded_mutator,True
+82,"import math
+
+def volume_sphere(r):
+    volume = 4 / 3 * math.pi * r * r * r
+    return volume","import math
+
+def volume_sphere(r):
+    volume = 4 * 3 * math.pi * r * r * r
+    return volume",Div_to_Mult,expanded_mutator,True
+83,"def get_Char(strr):
+    summ = 0
+    for i in range(len(strr)):
+        summ += ord(strr[i]) - ord('a') + 1
+    if summ % 26 == 0:
+        return ord('z')
+    else:
+        summ = summ % 26
+        return chr(ord('a') + summ - 1)","def get_Char(strr):
+    summ = 0
+    for i in range(len(strr)):
+        summ += ord(strr[i]) + ord('a') + 1
+    if summ % 26 == 0:
+        return ord('z')
+    else:
+        summ = summ % 26
+        return chr(ord('a') + summ - 1)",Sub_to_Add,expanded_mutator,True
+84,"def sequence(n):
+    if n == 1 or n == 2:
+        return 1
+    else:
+        return sequence(sequence(n - 1)) + sequence(n - sequence(n - 1))","def sequence(n):
+    if n != 1 or n == 2:
+        return 1
+    else:
+        return sequence(sequence(n - 1)) + sequence(n - sequence(n - 1))",Eq_to_NotEq,expanded_mutator,True
+85,"import math
+
+def surfacearea_sphere(r):
+    surfacearea = 4 * math.pi * r * r
+    return surfacearea","import math
+
+def surfacearea_sphere(r):
+    surfacearea = 4 / math.pi * r * r
+    return surfacearea",Mult_to_Div,expanded_mutator,True
+86,"def centered_hexagonal_number(n):
+    return 3 * n * (n - 1) + 1","def centered_hexagonal_number(n):
+    return 3 / n * (n - 1) + 1",Mult_to_Div,expanded_mutator,True
+89,"def closest_num(N):
+    return N - 1","def closest_num(N):
+    return N + 1",Sub_to_Add,expanded_mutator,True
+90,"def len_log(list1):
+    max = len(list1[0])
+    for i in list1:
+        if len(i) > max:
+            max = len(i)
+    return max","def len_log(list1):
+    max = len(list1[0])
+    for i in list1:
+        if len(i) < max:
+            max = len(i)
+    return max",Gt_to_Lt,original_mutator,True
+92,"def is_undulating(n):
+    n = str(n)
+    if len(n) <= 2:
+        return False
+    for i in range(2, len(n)):
+        if n[i - 2] != n[i]:
+            return False
+    return True","def is_undulating(n):
+    n = str(n)
+    if len(n) >= 2:
+        return False
+    for i in range(2, len(n)):
+        if n[i - 2] != n[i]:
+            return False
+    return True",LtE_to_GtE,original_mutator,True
+93,"def power(a, b):
+    if b == 0:
+        return 1
+    elif a == 0:
+        return 0
+    elif b == 1:
+        return a
+    else:
+        return a * power(a, b - 1)","def power(a, b):
+    if b != 0:
+        return 1
+    elif a == 0:
+        return 0
+    elif b == 1:
+        return a
+    else:
+        return a * power(a, b - 1)",Eq_to_NotEq,expanded_mutator,True
+94,"from operator import itemgetter
+
+def index_minimum(test_list):
+    res = min(test_list, key=itemgetter(1))[0]
+    return res","from operator import itemgetter
+
+def index_minimum(test_list):
+    res = max(test_list, key=itemgetter(1))[0]
+    return res",min_to_max,original_mutator,True
+95,"def Find_Min_Length(lst):
+    minLength = min((len(x) for x in lst))
+    return minLength","def Find_Min_Length(lst):
+    minLength = max((len(x) for x in lst))
+    return minLength",min_to_max,original_mutator,True
+96,"def divisor(n):
+    for i in range(n):
+        x = len([i for i in range(1, n + 1) if not n % i])
+    return x","def divisor(n):
+    for i in range(n):
+        x = len([i for i in range(1, n - 1) if not n % i])
+    return x",Add_to_Sub,expanded_mutator,True
+98,"def multiply_num(numbers):
+    total = 1
+    for x in numbers:
+        total *= x
+    return total / len(numbers)","def multiply_num(numbers):
+    total = 1
+    for x in numbers:
+        total *= x
+    return total * len(numbers)",Div_to_Mult,expanded_mutator,True
+100,"import sys
+
+def next_smallest_palindrome(num):
+    numstr = str(num)
+    for i in range(num + 1, sys.maxsize):
+        if str(i) == str(i)[::-1]:
+            return i","import sys
+
+def next_smallest_palindrome(num):
+    numstr = str(num)
+    for i in range(num - 1, sys.maxsize):
+        if str(i) == str(i)[::-1]:
+            return i",Add_to_Sub,expanded_mutator,True
+101,"def kth_element(arr, k):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                (arr[j], arr[j + 1] == arr[j + 1], arr[j])
+    return arr[k - 1]","def kth_element(arr, k):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                (arr[j], arr[j + 1] == arr[j + 1], arr[j])
+    return arr[k + 1]",Sub_to_Add,expanded_mutator,True
+102,"def snake_to_camel(word):
+    import re
+    return ''.join((x.capitalize() or '_' for x in word.split('_')))","def snake_to_camel(word):
+    import re
+    return ''.join((x.capitalize() and '_' for x in word.split('_')))",Or_to_And,expanded_mutator,True
+103,"def eulerian_num(n, m):
+    if m >= n or n == 0:
+        return 0
+    if m == 0:
+        return 1
+    return (n - m) * eulerian_num(n - 1, m - 1) + (m + 1) * eulerian_num(n - 1, m)","def eulerian_num(n, m):
+    if m <= n or n == 0:
+        return 0
+    if m == 0:
+        return 1
+    return (n - m) * eulerian_num(n - 1, m - 1) + (m + 1) * eulerian_num(n - 1, m)",GtE_to_LtE,original_mutator,True
+109,"def odd_Equivalent(s, n):
+    count = 0
+    for i in range(0, n):
+        if s[i] == '1':
+            count = count + 1
+    return count","def odd_Equivalent(s, n):
+    count = 0
+    for i in range(0, n):
+        if s[i] != '1':
+            count = count + 1
+    return count",Eq_to_NotEq,expanded_mutator,True
+113,"def check_integer(text):
+    text = text.strip()
+    if len(text) < 1:
+        return None
+    elif all((text[i] in '0123456789' for i in range(len(text)))):
+        return True
+    elif text[0] in '+-' and all((text[i] in '0123456789' for i in range(1, len(text)))):
+        return True
+    else:
+        return False","def check_integer(text):
+    text = text.strip()
+    if len(text) > 1:
+        return None
+    elif all((text[i] in '0123456789' for i in range(len(text)))):
+        return True
+    elif text[0] in '+-' and all((text[i] in '0123456789' for i in range(1, len(text)))):
+        return True
+    else:
+        return False",Lt_to_Gt,original_mutator,True
+120,"def max_product_tuple(list1):
+    result_max = max([abs(x * y) for x, y in list1])
+    return result_max","def max_product_tuple(list1):
+    result_max = min([abs(x * y) for x, y in list1])
+    return result_max",max_to_min,original_mutator,True
+123,"def amicable_numbers_sum(limit):
+    if not isinstance(limit, int):
+        return 'Input is not an integer!'
+    if limit < 1:
+        return 'Input must be bigger than 0!'
+    amicables = set()
+    for num in range(2, limit + 1):
+        if num in amicables:
+            continue
+        sum_fact = sum([fact for fact in range(1, num) if num % fact == 0])
+        sum_fact2 = sum([fact for fact in range(1, sum_fact) if sum_fact % fact == 0])
+        if num == sum_fact2 and num != sum_fact:
+            amicables.add(num)
+            amicables.add(sum_fact2)
+    return sum(amicables)","def amicable_numbers_sum(limit):
+    if not isinstance(limit, int):
+        return 'Input is not an integer!'
+    if limit > 1:
+        return 'Input must be bigger than 0!'
+    amicables = set()
+    for num in range(2, limit + 1):
+        if num in amicables:
+            continue
+        sum_fact = sum([fact for fact in range(1, num) if num % fact == 0])
+        sum_fact2 = sum([fact for fact in range(1, sum_fact) if sum_fact % fact == 0])
+        if num == sum_fact2 and num != sum_fact:
+            amicables.add(num)
+            amicables.add(sum_fact2)
+    return sum(amicables)",Lt_to_Gt,original_mutator,True
+124,"import cmath
+
+def angle_complex(a, b):
+    cn = complex(a, b)
+    angle = cmath.phase(a + b)
+    return angle","import cmath
+
+def angle_complex(a, b):
+    cn = complex(a, b)
+    angle = cmath.phase(a - b)
+    return angle",Add_to_Sub,expanded_mutator,True
+125,"def find_length(string):
+    n = len(string)
+    current_sum = 0
+    max_sum = 0
+    for i in range(n):
+        current_sum += 1 if string[i] == '0' else -1
+        if current_sum < 0:
+            current_sum = 0
+        max_sum = max(current_sum, max_sum)
+    return max_sum if max_sum else 0","def find_length(string):
+    n = len(string)
+    current_sum = 0
+    max_sum = 0
+    for i in range(n):
+        current_sum += 1 if string[i] == '0' else -1
+        if current_sum > 0:
+            current_sum = 0
+        max_sum = max(current_sum, max_sum)
+    return max_sum if max_sum else 0",Lt_to_Gt,original_mutator,True
+126,"def sum(a, b):
+    sum = 0
+    for i in range(1, min(a, b)):
+        if a % i == 0 and b % i == 0:
+            sum += i
+    return sum","def sum(a, b):
+    sum = 0
+    for i in range(1, min(a, b)):
+        if a % i != 0 and b % i == 0:
+            sum += i
+    return sum",Eq_to_NotEq,expanded_mutator,True
+127,"def multiply_int(x, y):
+    if y < 0:
+        return -multiply_int(x, -y)
+    elif y == 0:
+        return 0
+    elif y == 1:
+        return x
+    else:
+        return x + multiply_int(x, y - 1)","def multiply_int(x, y):
+    if y < 0:
+        return -multiply_int(x, -y)
+    elif y != 0:
+        return 0
+    elif y == 1:
+        return x
+    else:
+        return x + multiply_int(x, y - 1)",Eq_to_NotEq,expanded_mutator,True
+128,"def long_words(n, str):
+    word_len = []
+    txt = str.split(' ')
+    for x in txt:
+        if len(x) > n:
+            word_len.append(x)
+    return word_len","def long_words(n, str):
+    word_len = []
+    txt = str.split(' ')
+    for x in txt:
+        if len(x) < n:
+            word_len.append(x)
+    return word_len",Gt_to_Lt,original_mutator,True
+129,"def magic_square_test(my_matrix):
+    iSize = len(my_matrix[0])
+    sum_list = []
+    sum_list.extend([sum(lines) for lines in my_matrix])
+    for col in range(iSize):
+        sum_list.append(sum((row[col] for row in my_matrix)))
+    result1 = 0
+    for i in range(0, iSize):
+        result1 += my_matrix[i][i]
+    sum_list.append(result1)
+    result2 = 0
+    for i in range(iSize - 1, -1, -1):
+        result2 += my_matrix[i][i]
+    sum_list.append(result2)
+    if len(set(sum_list)) > 1:
+        return False
+    return True","def magic_square_test(my_matrix):
+    iSize = len(my_matrix[0])
+    sum_list = []
+    sum_list.extend([sum(lines) for lines in my_matrix])
+    for col in range(iSize):
+        sum_list.append(sum((row[col] for row in my_matrix)))
+    result1 = 0
+    for i in range(0, iSize):
+        result1 += my_matrix[i][i]
+    sum_list.append(result1)
+    result2 = 0
+    for i in range(iSize - 1, -1, -1):
+        result2 += my_matrix[i][i]
+    sum_list.append(result2)
+    if len(set(sum_list)) < 1:
+        return False
+    return True",Gt_to_Lt,original_mutator,True
+130,"from collections import defaultdict
+
+def max_occurrences(nums):
+    dict = defaultdict(int)
+    for i in nums:
+        dict[i] += 1
+    result = max(dict.items(), key=lambda x: x[1])
+    return result[0]","from collections import defaultdict
+
+def max_occurrences(nums):
+    dict = defaultdict(int)
+    for i in nums:
+        dict[i] += 1
+    result = min(dict.items(), key=lambda x: x[1])
+    return result[0]",max_to_min,original_mutator,True
+133,"def sum_negativenum(nums):
+    sum_negativenum = list(filter(lambda nums: nums < 0, nums))
+    return sum(sum_negativenum)","def sum_negativenum(nums):
+    sum_negativenum = list(filter(lambda nums: nums > 0, nums))
+    return sum(sum_negativenum)",Lt_to_Gt,original_mutator,True
+135,"def hexagonal_num(n):
+    return n * (2 * n - 1)","def hexagonal_num(n):
+    return n * (2 / n - 1)",Mult_to_Div,expanded_mutator,True
+137,"from array import array
+
+def zero_count(nums):
+    n = len(nums)
+    n1 = 0
+    for x in nums:
+        if x == 0:
+            n1 += 1
+        else:
+            None
+    return n1 / (n - n1)","from array import array
+
+def zero_count(nums):
+    n = len(nums)
+    n1 = 0
+    for x in nums:
+        if x != 0:
+            n1 += 1
+        else:
+            None
+    return n1 / (n - n1)",Eq_to_NotEq,expanded_mutator,True
+138,"def is_Sum_Of_Powers_Of_Two(n):
+    if n % 2 == 1:
+        return False
+    else:
+        return True","def is_Sum_Of_Powers_Of_Two(n):
+    if n % 2 != 1:
+        return False
+    else:
+        return True",Eq_to_NotEq,expanded_mutator,True
+139,"def circle_circumference(r):
+    perimeter = 2 * 3.1415 * r
+    return perimeter","def circle_circumference(r):
+    perimeter = 2 / 3.1415 * r
+    return perimeter",Mult_to_Div,expanded_mutator,True
+141,"def pancake_sort(nums):
+    arr_len = len(nums)
+    while arr_len > 1:
+        mi = nums.index(max(nums[0:arr_len]))
+        nums = nums[mi::-1] + nums[mi + 1:len(nums)]
+        nums = nums[arr_len - 1::-1] + nums[arr_len:len(nums)]
+        arr_len -= 1
+    return nums","def pancake_sort(nums):
+    arr_len = len(nums)
+    while arr_len < 1:
+        mi = nums.index(max(nums[0:arr_len]))
+        nums = nums[mi::-1] + nums[mi + 1:len(nums)]
+        nums = nums[arr_len - 1::-1] + nums[arr_len:len(nums)]
+        arr_len -= 1
+    return nums",Gt_to_Lt,original_mutator,True
+142,"def count_samepair(list1, list2, list3):
+    result = sum((m == n == o for m, n, o in zip(list1, list2, list3)))
+    return result","def count_samepair(list1, list2, list3):
+    result = sum((m != n == o for m, n, o in zip(list1, list2, list3)))
+    return result",Eq_to_NotEq,expanded_mutator,True
+145,"def max_Abs_Diff(arr):
+    n = len(arr)
+    minEle = arr[0]
+    maxEle = arr[0]
+    for i in range(1, n):
+        minEle = min(minEle, arr[i])
+        maxEle = max(maxEle, arr[i])
+    return maxEle - minEle","def max_Abs_Diff(arr):
+    n = len(arr)
+    minEle = arr[0]
+    maxEle = arr[0]
+    for i in range(1, n):
+        minEle = max(minEle, arr[i])
+        maxEle = max(maxEle, arr[i])
+    return maxEle - minEle",min_to_max,original_mutator,True
+160,"def find_solution(a, b, n):
+    i = 0
+    while i * a <= n:
+        if (n - i * a) % b == 0:
+            return (i, (n - i * a) // b)
+        i = i + 1
+    return None","def find_solution(a, b, n):
+    i = 0
+    while i * a >= n:
+        if (n - i * a) % b == 0:
+            return (i, (n - i * a) // b)
+        i = i + 1
+    return None",LtE_to_GtE,original_mutator,True
+162,"def sum_series(n):
+    if n < 1:
+        return 0
+    else:
+        return n + sum_series(n - 2)","def sum_series(n):
+    if n > 1:
+        return 0
+    else:
+        return n + sum_series(n - 2)",Lt_to_Gt,original_mutator,True
+163,"from math import tan, pi
+
+def area_polygon(s, l):
+    area = s * l ** 2 / (4 * tan(pi / s))
+    return area","from math import tan, pi
+
+def area_polygon(s, l):
+    area = s / l ** 2 / (4 * tan(pi / s))
+    return area",Mult_to_Div,expanded_mutator,True
+164,"import math
+
+def div_sum(n):
+    total = 1
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            total = total + i + math.floor(n / i)
+        i += 1
+    return total
+
+def are_equivalent(num1, num2):
+    return div_sum(num1) == div_sum(num2)","import math
+
+def div_sum(n):
+    total = 1
+    i = 2
+    while i * i >= n:
+        if n % i == 0:
+            total = total + i + math.floor(n / i)
+        i += 1
+    return total
+
+def are_equivalent(num1, num2):
+    return div_sum(num1) == div_sum(num2)",LtE_to_GtE,original_mutator,True
+165,"def count_char_position(str1):
+    count_chars = 0
+    for i in range(len(str1)):
+        if i == ord(str1[i]) - ord('A') or i == ord(str1[i]) - ord('a'):
+            count_chars += 1
+    return count_chars","def count_char_position(str1):
+    count_chars = 0
+    for i in range(len(str1)):
+        if i == ord(str1[i]) + ord('A') or i == ord(str1[i]) - ord('a'):
+            count_chars += 1
+    return count_chars",Sub_to_Add,expanded_mutator,True
+166,"def find_even_pair(A):
+    count = 0
+    for i in range(0, len(A)):
+        for j in range(i + 1, len(A)):
+            if (A[i] ^ A[j]) % 2 == 0:
+                count += 1
+    return count","def find_even_pair(A):
+    count = 0
+    for i in range(0, len(A)):
+        for j in range(i - 1, len(A)):
+            if (A[i] ^ A[j]) % 2 == 0:
+                count += 1
+    return count",Add_to_Sub,expanded_mutator,True
+167,"def next_power_of_2(n):
+    if n and (not n & n - 1):
+        return n
+    count = 0
+    while n != 0:
+        n >>= 1
+        count += 1
+    return 1 << count","def next_power_of_2(n):
+    if n or not n & n - 1:
+        return n
+    count = 0
+    while n != 0:
+        n >>= 1
+        count += 1
+    return 1 << count",And_to_Or,expanded_mutator,True
+168,"def frequency(a, x):
+    count = 0
+    for i in a:
+        if i == x:
+            count += 1
+    return count","def frequency(a, x):
+    count = 0
+    for i in a:
+        if i != x:
+            count += 1
+    return count",Eq_to_NotEq,expanded_mutator,True
+170,"def sum_range_list(list1, m, n):
+    sum_range = 0
+    for i in range(m, n + 1, 1):
+        sum_range += list1[i]
+    return sum_range","def sum_range_list(list1, m, n):
+    sum_range = 0
+    for i in range(m, n - 1, 1):
+        sum_range += list1[i]
+    return sum_range",Add_to_Sub,expanded_mutator,True
+171,"import math
+
+def perimeter_pentagon(a):
+    perimeter = 5 * a
+    return perimeter","import math
+
+def perimeter_pentagon(a):
+    perimeter = 5 / a
+    return perimeter",Mult_to_Div,expanded_mutator,True
+172,"def count_occurance(s):
+    count = 0
+    for i in range(len(s) - 2):
+        if s[i] == 's' and s[i + 1] == 't' and (s[i + 2] == 'd'):
+            count = count + 1
+    return count","def count_occurance(s):
+    count = 0
+    for i in range(len(s) - 2):
+        if s[i] != 's' and s[i + 1] == 't' and (s[i + 2] == 'd'):
+            count = count + 1
+    return count",Eq_to_NotEq,expanded_mutator,True
+223,"def is_majority(arr, n, x):
+    i = binary_search(arr, 0, n - 1, x)
+    if i == -1:
+        return False
+    if i + n // 2 <= n - 1 and arr[i + n // 2] == x:
+        return True
+    else:
+        return False
+
+def binary_search(arr, low, high, x):
+    if high >= low:
+        mid = (low + high) // 2
+        if (mid == 0 or x > arr[mid - 1]) and arr[mid] == x:
+            return mid
+        elif x > arr[mid]:
+            return binary_search(arr, mid + 1, high, x)
+        else:
+            return binary_search(arr, low, mid - 1, x)
+    return -1","def is_majority(arr, n, x):
+    i = binary_search(arr, 0, n - 1, x)
+    if i == -1:
+        return False
+    if i + n // 2 >= n - 1 and arr[i + n // 2] == x:
+        return True
+    else:
+        return False
+
+def binary_search(arr, low, high, x):
+    if high >= low:
+        mid = (low + high) // 2
+        if (mid == 0 or x > arr[mid - 1]) and arr[mid] == x:
+            return mid
+        elif x > arr[mid]:
+            return binary_search(arr, mid + 1, high, x)
+        else:
+            return binary_search(arr, low, mid - 1, x)
+    return -1",LtE_to_GtE,original_mutator,True
+226,"def odd_values_string(str):
+    result = ''
+    for i in range(len(str)):
+        if i % 2 == 0:
+            result = result + str[i]
+    return result","def odd_values_string(str):
+    result = ''
+    for i in range(len(str)):
+        if i % 2 != 0:
+            result = result + str[i]
+    return result",Eq_to_NotEq,expanded_mutator,True
+227,"def min_of_three(a, b, c):
+    if a <= b and a <= c:
+        smallest = a
+    elif b <= a and b <= c:
+        smallest = b
+    else:
+        smallest = c
+    return smallest","def min_of_three(a, b, c):
+    if a <= b or a <= c:
+        smallest = a
+    elif b <= a and b <= c:
+        smallest = b
+    else:
+        smallest = c
+    return smallest",And_to_Or,expanded_mutator,True
+228,"def all_Bits_Set_In_The_Given_Range(n, l, r):
+    num = (1 << r) - 1 ^ (1 << l - 1) - 1
+    new_num = n & num
+    if new_num == 0:
+        return True
+    return False","def all_Bits_Set_In_The_Given_Range(n, l, r):
+    num = (1 << r) + 1 ^ (1 << l - 1) - 1
+    new_num = n & num
+    if new_num == 0:
+        return True
+    return False",Sub_to_Add,expanded_mutator,True
+229,"def re_arrange_array(arr, n):
+    j = 0
+    for i in range(0, n):
+        if arr[i] < 0:
+            temp = arr[i]
+            arr[i] = arr[j]
+            arr[j] = temp
+            j = j + 1
+    return arr","def re_arrange_array(arr, n):
+    j = 0
+    for i in range(0, n):
+        if arr[i] > 0:
+            temp = arr[i]
+            arr[i] = arr[j]
+            arr[j] = temp
+            j = j + 1
+    return arr",Lt_to_Gt,original_mutator,True
+233,"def lateralsuface_cylinder(r, h):
+    lateralsurface = 2 * 3.1415 * r * h
+    return lateralsurface","def lateralsuface_cylinder(r, h):
+    lateralsurface = 2 / 3.1415 * r * h
+    return lateralsurface",Mult_to_Div,expanded_mutator,True
+234,"def volume_cube(l):
+    volume = l * l * l
+    return volume","def volume_cube(l):
+    volume = l / l * l
+    return volume",Mult_to_Div,expanded_mutator,True
+235,"def even_bit_set_number(n):
+    count = 0
+    res = 0
+    temp = n
+    while temp > 0:
+        if count % 2 == 1:
+            res |= 1 << count
+        count += 1
+        temp >>= 1
+    return n | res","def even_bit_set_number(n):
+    count = 0
+    res = 0
+    temp = n
+    while temp < 0:
+        if count % 2 == 1:
+            res |= 1 << count
+        count += 1
+        temp >>= 1
+    return n | res",Gt_to_Lt,original_mutator,True
+238,"def number_of_substrings(str):
+    str_len = len(str)
+    return int(str_len * (str_len + 1) / 2)","def number_of_substrings(str):
+    str_len = len(str)
+    return int(str_len * (str_len - 1) / 2)",Add_to_Sub,expanded_mutator,True
+239,"def get_total_number_of_sequences(m, n):
+    T = [[0 for i in range(n + 1)] for i in range(m + 1)]
+    for i in range(m + 1):
+        for j in range(n + 1):
+            if i == 0 or j == 0:
+                T[i][j] = 0
+            elif i < j:
+                T[i][j] = 0
+            elif j == 1:
+                T[i][j] = i
+            else:
+                T[i][j] = T[i - 1][j] + T[i // 2][j - 1]
+    return T[m][n]","def get_total_number_of_sequences(m, n):
+    T = [[0 for i in range(n + 1)] for i in range(m + 1)]
+    for i in range(m + 1):
+        for j in range(n + 1):
+            if i == 0 or j == 0:
+                T[i][j] = 0
+            elif i > j:
+                T[i][j] = 0
+            elif j == 1:
+                T[i][j] = i
+            else:
+                T[i][j] = T[i - 1][j] + T[i // 2][j - 1]
+    return T[m][n]",Lt_to_Gt,original_mutator,True
+242,"def count_charac(str1):
+    total = 0
+    for i in str1:
+        total = total + 1
+    return total","def count_charac(str1):
+    total = 0
+    for i in str1:
+        total = total - 1
+    return total",Add_to_Sub,expanded_mutator,True
+244,"import math
+
+def next_Perfect_Square(N):
+    nextN = math.floor(math.sqrt(N)) + 1
+    return nextN * nextN","import math
+
+def next_Perfect_Square(N):
+    nextN = math.floor(math.sqrt(N)) - 1
+    return nextN * nextN",Add_to_Sub,expanded_mutator,True
+245,"def max_sum(arr):
+    MSIBS = arr[:]
+    for i in range(len(arr)):
+        for j in range(0, i):
+            if arr[i] > arr[j] and MSIBS[i] < MSIBS[j] + arr[i]:
+                MSIBS[i] = MSIBS[j] + arr[i]
+    MSDBS = arr[:]
+    for i in range(1, len(arr) + 1):
+        for j in range(1, i):
+            if arr[-i] > arr[-j] and MSDBS[-i] < MSDBS[-j] + arr[-i]:
+                MSDBS[-i] = MSDBS[-j] + arr[-i]
+    max_sum = float('-Inf')
+    for i, j, k in zip(MSIBS, MSDBS, arr):
+        max_sum = max(max_sum, i + j - k)
+    return max_sum","def max_sum(arr):
+    MSIBS = arr[:]
+    for i in range(len(arr)):
+        for j in range(0, i):
+            if arr[i] < arr[j] and MSIBS[i] < MSIBS[j] + arr[i]:
+                MSIBS[i] = MSIBS[j] + arr[i]
+    MSDBS = arr[:]
+    for i in range(1, len(arr) + 1):
+        for j in range(1, i):
+            if arr[-i] > arr[-j] and MSDBS[-i] < MSDBS[-j] + arr[-i]:
+                MSDBS[-i] = MSDBS[-j] + arr[-i]
+    max_sum = float('-Inf')
+    for i, j, k in zip(MSIBS, MSDBS, arr):
+        max_sum = max(max_sum, i + j - k)
+    return max_sum",Gt_to_Lt,original_mutator,True
+246,"def babylonian_squareroot(number):
+    if number == 0:
+        return 0
+    g = number / 2.0
+    g2 = g + 1
+    while g != g2:
+        n = number / g
+        g2 = g
+        g = (g + n) / 2
+    return g","def babylonian_squareroot(number):
+    if number != 0:
+        return 0
+    g = number / 2.0
+    g2 = g + 1
+    while g != g2:
+        n = number / g
+        g2 = g
+        g = (g + n) / 2
+    return g",Eq_to_NotEq,expanded_mutator,True
+247,"def lps(str):
+    n = len(str)
+    L = [[0 for x in range(n)] for x in range(n)]
+    for i in range(n):
+        L[i][i] = 1
+    for cl in range(2, n + 1):
+        for i in range(n - cl + 1):
+            j = i + cl - 1
+            if str[i] == str[j] and cl == 2:
+                L[i][j] = 2
+            elif str[i] == str[j]:
+                L[i][j] = L[i + 1][j - 1] + 2
+            else:
+                L[i][j] = max(L[i][j - 1], L[i + 1][j])
+    return L[0][n - 1]","def lps(str):
+    n = len(str)
+    L = [[0 for x in range(n)] for x in range(n)]
+    for i in range(n):
+        L[i][i] = 1
+    for cl in range(2, n + 1):
+        for i in range(n - cl + 1):
+            j = i + cl - 1
+            if str[i] == str[j] and cl == 2:
+                L[i][j] = 2
+            elif str[i] == str[j]:
+                L[i][j] = L[i + 1][j - 1] + 2
+            else:
+                L[i][j] = min(L[i][j - 1], L[i + 1][j])
+    return L[0][n - 1]",max_to_min,original_mutator,True
+248,"def harmonic_sum(n):
+    if n < 2:
+        return 1
+    else:
+        return 1 / n + harmonic_sum(n - 1)","def harmonic_sum(n):
+    if n > 2:
+        return 1
+    else:
+        return 1 / n + harmonic_sum(n - 1)",Lt_to_Gt,original_mutator,True
+250,"def count_X(tup, x):
+    count = 0
+    for ele in tup:
+        if ele == x:
+            count = count + 1
+    return count","def count_X(tup, x):
+    count = 0
+    for ele in tup:
+        if ele != x:
+            count = count + 1
+    return count",Eq_to_NotEq,expanded_mutator,True
+253,"def count_integer(list1):
+    ctr = 0
+    for i in list1:
+        if isinstance(i, int):
+            ctr = ctr + 1
+    return ctr","def count_integer(list1):
+    ctr = 0
+    for i in list1:
+        if isinstance(i, int):
+            ctr = ctr - 1
+    return ctr",Add_to_Sub,expanded_mutator,True
+256,"def count_Primes_nums(n):
+    ctr = 0
+    for num in range(n):
+        if num <= 1:
+            continue
+        for i in range(2, num):
+            if num % i == 0:
+                break
+        else:
+            ctr += 1
+    return ctr","def count_Primes_nums(n):
+    ctr = 0
+    for num in range(n):
+        if num >= 1:
+            continue
+        for i in range(2, num):
+            if num % i == 0:
+                break
+        else:
+            ctr += 1
+    return ctr",LtE_to_GtE,original_mutator,True
+259,"def maximize_elements(test_tup1, test_tup2):
+    res = tuple((tuple((max(a, b) for a, b in zip(tup1, tup2))) for tup1, tup2 in zip(test_tup1, test_tup2)))
+    return res","def maximize_elements(test_tup1, test_tup2):
+    res = tuple((tuple((min(a, b) for a, b in zip(tup1, tup2))) for tup1, tup2 in zip(test_tup1, test_tup2)))
+    return res",max_to_min,original_mutator,True
+260,"def newman_prime(n):
+    if n == 0 or n == 1:
+        return 1
+    return 2 * newman_prime(n - 1) + newman_prime(n - 2)","def newman_prime(n):
+    if n != 0 or n == 1:
+        return 1
+    return 2 * newman_prime(n - 1) + newman_prime(n - 2)",Eq_to_NotEq,expanded_mutator,True
+264,"def dog_age(h_age):
+    if h_age < 0:
+        exit()
+    elif h_age <= 2:
+        d_age = h_age * 10.5
+    else:
+        d_age = 21 + (h_age - 2) * 4
+    return d_age","def dog_age(h_age):
+    if h_age < 0:
+        exit()
+    elif h_age <= 2:
+        d_age = h_age * 10.5
+    else:
+        d_age = 21 + (h_age + 2) * 4
+    return d_age",Sub_to_Add,expanded_mutator,True
+266,"def lateralsurface_cube(l):
+    LSA = 4 * (l * l)
+    return LSA","def lateralsurface_cube(l):
+    LSA = 4 * (l / l)
+    return LSA",Mult_to_Div,expanded_mutator,True
+267,"def square_Sum(n):
+    return int(n * (4 * n * n - 1) / 3)","def square_Sum(n):
+    return int(n * (4 / n * n - 1) / 3)",Mult_to_Div,expanded_mutator,True
+268,"def find_star_num(n):
+    return 6 * n * (n - 1) + 1","def find_star_num(n):
+    return 6 / n * (n - 1) + 1",Mult_to_Div,expanded_mutator,True
+270,"def sum_even_and_even_index(arr):
+    i = 0
+    sum = 0
+    for i in range(0, len(arr), 2):
+        if arr[i] % 2 == 0:
+            sum += arr[i]
+    return sum","def sum_even_and_even_index(arr):
+    i = 0
+    sum = 0
+    for i in range(0, len(arr), 2):
+        if arr[i] % 2 != 0:
+            sum += arr[i]
+    return sum",Eq_to_NotEq,expanded_mutator,True
+271,"def even_Power_Sum(n):
+    sum = 0
+    for i in range(1, n + 1):
+        j = 2 * i
+        sum = sum + j * j * j * j * j
+    return sum","def even_Power_Sum(n):
+    sum = 0
+    for i in range(1, n - 1):
+        j = 2 * i
+        sum = sum + j * j * j * j * j
+    return sum",Add_to_Sub,expanded_mutator,True
+273,"def substract_elements(test_tup1, test_tup2):
+    res = tuple(map(lambda i, j: i - j, test_tup1, test_tup2))
+    return res","def substract_elements(test_tup1, test_tup2):
+    res = tuple(map(lambda i, j: i + j, test_tup1, test_tup2))
+    return res",Sub_to_Add,expanded_mutator,True
+274,"import math
+
+def even_binomial_Coeff_Sum(n):
+    return 1 << n - 1","import math
+
+def even_binomial_Coeff_Sum(n):
+    return 1 << n + 1",Sub_to_Add,expanded_mutator,True
+276,"def volume_cylinder(r, h):
+    volume = 3.1415 * r * r * h
+    return volume","def volume_cylinder(r, h):
+    volume = 3.1415 / r * r * h
+    return volume",Mult_to_Div,expanded_mutator,True
+277,"def dict_filter(dict, n):
+    result = {key: value for key, value in dict.items() if value >= n}
+    return result","def dict_filter(dict, n):
+    result = {key: value for key, value in dict.items() if value <= n}
+    return result",GtE_to_LtE,original_mutator,True
+279,"def is_num_decagonal(n):
+    return 4 * n * n - 3 * n","def is_num_decagonal(n):
+    return 4 / n * n - 3 * n",Mult_to_Div,expanded_mutator,True
+280,"def sequential_search(dlist, item):
+    pos = 0
+    found = False
+    while pos < len(dlist) and (not found):
+        if dlist[pos] == item:
+            found = True
+        else:
+            pos = pos + 1
+    return (found, pos)","def sequential_search(dlist, item):
+    pos = 0
+    found = False
+    while pos > len(dlist) and (not found):
+        if dlist[pos] == item:
+            found = True
+        else:
+            pos = pos + 1
+    return (found, pos)",Lt_to_Gt,original_mutator,True
+281,"def all_unique(test_list):
+    if len(test_list) > len(set(test_list)):
+        return False
+    return True","def all_unique(test_list):
+    if len(test_list) < len(set(test_list)):
+        return False
+    return True",Gt_to_Lt,original_mutator,True
+282,"def sub_list(nums1, nums2):
+    result = map(lambda x, y: x - y, nums1, nums2)
+    return list(result)","def sub_list(nums1, nums2):
+    result = map(lambda x, y: x + y, nums1, nums2)
+    return list(result)",Sub_to_Add,expanded_mutator,True
+283,"def validate(n):
+    for i in range(10):
+        temp = n
+        count = 0
+        while temp:
+            if temp % 10 == i:
+                count += 1
+            if count > i:
+                return False
+            temp //= 10
+    return True","def validate(n):
+    for i in range(10):
+        temp = n
+        count = 0
+        while temp:
+            if temp % 10 == i:
+                count += 1
+            if count < i:
+                return False
+            temp //= 10
+    return True",Gt_to_Lt,original_mutator,True
+284,"def check_element(list, element):
+    check_element = all((v == element for v in list))
+    return check_element","def check_element(list, element):
+    check_element = all((v != element for v in list))
+    return check_element",Eq_to_NotEq,expanded_mutator,True
+286,"def max_sub_array_sum_repeated(a, n, k):
+    max_so_far = -2147483648
+    max_ending_here = 0
+    for i in range(n * k):
+        max_ending_here = max_ending_here + a[i % n]
+        if max_so_far < max_ending_here:
+            max_so_far = max_ending_here
+        if max_ending_here < 0:
+            max_ending_here = 0
+    return max_so_far","def max_sub_array_sum_repeated(a, n, k):
+    max_so_far = -2147483648
+    max_ending_here = 0
+    for i in range(n * k):
+        max_ending_here = max_ending_here + a[i % n]
+        if max_so_far > max_ending_here:
+            max_so_far = max_ending_here
+        if max_ending_here < 0:
+            max_ending_here = 0
+    return max_so_far",Lt_to_Gt,original_mutator,True
+287,"def square_Sum(n):
+    return int(2 * n * (n + 1) * (2 * n + 1) / 3)","def square_Sum(n):
+    return int(2 / n * (n + 1) * (2 * n + 1) / 3)",Mult_to_Div,expanded_mutator,True
+290,"def max_length(list1):
+    max_length = max((len(x) for x in list1))
+    max_list = max((x for x in list1))
+    return (max_length, max_list)","def max_length(list1):
+    max_length = min((len(x) for x in list1))
+    max_list = max((x for x in list1))
+    return (max_length, max_list)",max_to_min,original_mutator,True
+291,"def count_no_of_ways(n, k):
+    dp = [0] * (n + 1)
+    total = k
+    mod = 1000000007
+    dp[1] = k
+    dp[2] = k * k
+    for i in range(3, n + 1):
+        dp[i] = (k - 1) * (dp[i - 1] + dp[i - 2]) % mod
+    return dp[n]","def count_no_of_ways(n, k):
+    dp = [0] * (n + 1)
+    total = k
+    mod = 1000000007
+    dp[1] = k
+    dp[2] = k / k
+    for i in range(3, n + 1):
+        dp[i] = (k - 1) * (dp[i - 1] + dp[i - 2]) % mod
+    return dp[n]",Mult_to_Div,expanded_mutator,True
+292,"def find(n, m):
+    q = n // m
+    return q","def find(n, m):
+    q = n / m
+    return q",FloorDiv_to_Div,expanded_mutator,True
+293,"import math
+
+def otherside_rightangle(w, h):
+    s = math.sqrt(w * w + h * h)
+    return s","import math
+
+def otherside_rightangle(w, h):
+    s = math.sqrt(w / w + h * h)
+    return s",Mult_to_Div,expanded_mutator,True
+294,"def max_val(listval):
+    max_val = max((i for i in listval if isinstance(i, int)))
+    return max_val","def max_val(listval):
+    max_val = min((i for i in listval if isinstance(i, int)))
+    return max_val",max_to_min,original_mutator,True
+295,"def sum_div(number):
+    divisors = [1]
+    for i in range(2, number):
+        if number % i == 0:
+            divisors.append(i)
+    return sum(divisors)","def sum_div(number):
+    divisors = [1]
+    for i in range(2, number):
+        if number % i != 0:
+            divisors.append(i)
+    return sum(divisors)",Eq_to_NotEq,expanded_mutator,True
+296,"def get_Inv_Count(arr):
+    inv_count = 0
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[i] > arr[j]:
+                inv_count += 1
+    return inv_count","def get_Inv_Count(arr):
+    inv_count = 0
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[i] < arr[j]:
+                inv_count += 1
+    return inv_count",Gt_to_Lt,original_mutator,True
+299,"from collections import defaultdict
+
+def max_aggregate(stdata):
+    temp = defaultdict(int)
+    for name, marks in stdata:
+        temp[name] += marks
+    return max(temp.items(), key=lambda x: x[1])","from collections import defaultdict
+
+def max_aggregate(stdata):
+    temp = defaultdict(int)
+    for name, marks in stdata:
+        temp[name] += marks
+    return min(temp.items(), key=lambda x: x[1])",max_to_min,original_mutator,True
+300,"def count_binary_seq(n):
+    nCr = 1
+    res = 1
+    for r in range(1, n + 1):
+        nCr = nCr * (n + 1 - r) / r
+        res += nCr * nCr
+    return res","def count_binary_seq(n):
+    nCr = 1
+    res = 1
+    for r in range(1, n - 1):
+        nCr = nCr * (n + 1 - r) / r
+        res += nCr * nCr
+    return res",Add_to_Sub,expanded_mutator,True
+301,"def dict_depth(d):
+    if isinstance(d, dict):
+        return 1 + (max(map(dict_depth, d.values())) if d else 0)
+    return 0","def dict_depth(d):
+    if isinstance(d, dict):
+        return 1 + (min(map(dict_depth, d.values())) if d else 0)
+    return 0",max_to_min,original_mutator,True
+304,"def find_Element(arr, ranges, rotations, index):
+    for i in range(rotations - 1, -1, -1):
+        left = ranges[i][0]
+        right = ranges[i][1]
+        if left <= index and right >= index:
+            if index == left:
+                index = right
+            else:
+                index = index - 1
+    return arr[index]","def find_Element(arr, ranges, rotations, index):
+    for i in range(rotations - 1, -1, -1):
+        left = ranges[i][0]
+        right = ranges[i][1]
+        if left >= index and right >= index:
+            if index == left:
+                index = right
+            else:
+                index = index - 1
+    return arr[index]",LtE_to_GtE,original_mutator,True
+306,"def max_sum_increasing_subseq(a, n, index, k):
+    dp = [[0 for i in range(n)] for i in range(n)]
+    for i in range(n):
+        if a[i] > a[0]:
+            dp[0][i] = a[i] + a[0]
+        else:
+            dp[0][i] = a[i]
+    for i in range(1, n):
+        for j in range(n):
+            if a[j] > a[i] and j > i:
+                if dp[i - 1][i] + a[j] > dp[i - 1][j]:
+                    dp[i][j] = dp[i - 1][i] + a[j]
+                else:
+                    dp[i][j] = dp[i - 1][j]
+            else:
+                dp[i][j] = dp[i - 1][j]
+    return dp[index][k]","def max_sum_increasing_subseq(a, n, index, k):
+    dp = [[0 for i in range(n)] for i in range(n)]
+    for i in range(n):
+        if a[i] < a[0]:
+            dp[0][i] = a[i] + a[0]
+        else:
+            dp[0][i] = a[i]
+    for i in range(1, n):
+        for j in range(n):
+            if a[j] > a[i] and j > i:
+                if dp[i - 1][i] + a[j] > dp[i - 1][j]:
+                    dp[i][j] = dp[i - 1][i] + a[j]
+                else:
+                    dp[i][j] = dp[i - 1][j]
+            else:
+                dp[i][j] = dp[i - 1][j]
+    return dp[index][k]",Gt_to_Lt,original_mutator,True
+308,"def large_product(nums1, nums2, N):
+    result = sorted([x * y for x in nums1 for y in nums2], reverse=True)[:N]
+    return result","def large_product(nums1, nums2, N):
+    result = sorted([x / y for x in nums1 for y in nums2], reverse=True)[:N]
+    return result",Mult_to_Div,expanded_mutator,True
+309,"def maximum(a, b):
+    if a >= b:
+        return a
+    else:
+        return b","def maximum(a, b):
+    if a <= b:
+        return a
+    else:
+        return b",GtE_to_LtE,original_mutator,True
+312,"import math
+
+def volume_cone(r, h):
+    volume = 1.0 / 3 * math.pi * r * r * h
+    return volume","import math
+
+def volume_cone(r, h):
+    volume = 1.0 * 3 * math.pi * r * r * h
+    return volume",Div_to_Mult,expanded_mutator,True
+388,"def highest_Power_of_2(n):
+    res = 0
+    for i in range(n, 0, -1):
+        if i & i - 1 == 0:
+            res = i
+            break
+    return res","def highest_Power_of_2(n):
+    res = 0
+    for i in range(n, 0, -1):
+        if i & i + 1 == 0:
+            res = i
+            break
+    return res",Sub_to_Add,expanded_mutator,True
+389,"def find_lucas(n):
+    if n == 0:
+        return 2
+    if n == 1:
+        return 1
+    return find_lucas(n - 1) + find_lucas(n - 2)","def find_lucas(n):
+    if n != 0:
+        return 2
+    if n == 1:
+        return 1
+    return find_lucas(n - 1) + find_lucas(n - 2)",Eq_to_NotEq,expanded_mutator,True
+392,"def get_max_sum(n):
+    res = list()
+    res.append(0)
+    res.append(1)
+    i = 2
+    while i < n + 1:
+        res.append(max(i, res[int(i / 2)] + res[int(i / 3)] + res[int(i / 4)] + res[int(i / 5)]))
+        i = i + 1
+    return res[n]","def get_max_sum(n):
+    res = list()
+    res.append(0)
+    res.append(1)
+    i = 2
+    while i < n + 1:
+        res.append(max(i, res[int(i / 2)] - res[int(i / 3)] + res[int(i / 4)] + res[int(i / 5)]))
+        i = i + 1
+    return res[n]",Add_to_Sub,expanded_mutator,True
+393,"def max_length_list(input_list):
+    max_length = max((len(x) for x in input_list))
+    max_list = max(input_list, key=lambda i: len(i))
+    return (max_length, max_list)","def max_length_list(input_list):
+    max_length = min((len(x) for x in input_list))
+    max_list = max(input_list, key=lambda i: len(i))
+    return (max_length, max_list)",max_to_min,original_mutator,True
+395,"def first_non_repeating_character(str1):
+    char_order = []
+    ctr = {}
+    for c in str1:
+        if c in ctr:
+            ctr[c] += 1
+        else:
+            ctr[c] = 1
+            char_order.append(c)
+    for c in char_order:
+        if ctr[c] == 1:
+            return c
+    return None","def first_non_repeating_character(str1):
+    char_order = []
+    ctr = {}
+    for c in str1:
+        if c in ctr:
+            ctr[c] += 1
+        else:
+            ctr[c] = 1
+            char_order.append(c)
+    for c in char_order:
+        if ctr[c] != 1:
+            return c
+    return None",Eq_to_NotEq,expanded_mutator,True
+397,"def median_numbers(a, b, c):
+    if a > b:
+        if a < c:
+            median = a
+        elif b > c:
+            median = b
+        else:
+            median = c
+    elif a > c:
+        median = a
+    elif b < c:
+        median = b
+    else:
+        median = c
+    return median","def median_numbers(a, b, c):
+    if a < b:
+        if a < c:
+            median = a
+        elif b > c:
+            median = b
+        else:
+            median = c
+    elif a > c:
+        median = a
+    elif b < c:
+        median = b
+    else:
+        median = c
+    return median",Gt_to_Lt,original_mutator,True
+401,"def add_nested_tuples(test_tup1, test_tup2):
+    res = tuple((tuple((a + b for a, b in zip(tup1, tup2))) for tup1, tup2 in zip(test_tup1, test_tup2)))
+    return res","def add_nested_tuples(test_tup1, test_tup2):
+    res = tuple((tuple((a - b for a, b in zip(tup1, tup2))) for tup1, tup2 in zip(test_tup1, test_tup2)))
+    return res",Add_to_Sub,expanded_mutator,True
+404,"def minimum(a, b):
+    if a <= b:
+        return a
+    else:
+        return b","def minimum(a, b):
+    if a >= b:
+        return a
+    else:
+        return b",LtE_to_GtE,original_mutator,True
+407,"def rearrange_bigger(n):
+    nums = list(str(n))
+    for i in range(len(nums) - 2, -1, -1):
+        if nums[i] < nums[i + 1]:
+            z = nums[i:]
+            y = min(filter(lambda x: x > z[0], z))
+            z.remove(y)
+            z.sort()
+            nums[i:] = [y] + z
+            return int(''.join(nums))
+    return False","def rearrange_bigger(n):
+    nums = list(str(n))
+    for i in range(len(nums) - 2, -1, -1):
+        if nums[i] > nums[i + 1]:
+            z = nums[i:]
+            y = min(filter(lambda x: x > z[0], z))
+            z.remove(y)
+            z.sort()
+            nums[i:] = [y] + z
+            return int(''.join(nums))
+    return False",Lt_to_Gt,original_mutator,True
+408,"import heapq
+
+def k_smallest_pairs(nums1, nums2, k):
+    queue = []
+
+    def push(i, j):
+        if i < len(nums1) and j < len(nums2):
+            heapq.heappush(queue, [nums1[i] + nums2[j], i, j])
+    push(0, 0)
+    pairs = []
+    while queue and len(pairs) < k:
+        _, i, j = heapq.heappop(queue)
+        pairs.append([nums1[i], nums2[j]])
+        push(i, j + 1)
+        if j == 0:
+            push(i + 1, 0)
+    return pairs","import heapq
+
+def k_smallest_pairs(nums1, nums2, k):
+    queue = []
+
+    def push(i, j):
+        if i > len(nums1) and j < len(nums2):
+            heapq.heappush(queue, [nums1[i] + nums2[j], i, j])
+    push(0, 0)
+    pairs = []
+    while queue and len(pairs) < k:
+        _, i, j = heapq.heappop(queue)
+        pairs.append([nums1[i], nums2[j]])
+        push(i, j + 1)
+        if j == 0:
+            push(i + 1, 0)
+    return pairs",Lt_to_Gt,original_mutator,True
+409,"def min_product_tuple(list1):
+    result_min = min([abs(x * y) for x, y in list1])
+    return result_min","def min_product_tuple(list1):
+    result_min = max([abs(x * y) for x, y in list1])
+    return result_min",min_to_max,original_mutator,True
+410,"def min_val(listval):
+    min_val = min((i for i in listval if isinstance(i, int)))
+    return min_val","def min_val(listval):
+    min_val = max((i for i in listval if isinstance(i, int)))
+    return min_val",min_to_max,original_mutator,True
+411,"import re
+
+def snake_to_camel(word):
+    return ''.join((x.capitalize() or '_' for x in word.split('_')))","import re
+
+def snake_to_camel(word):
+    return ''.join((x.capitalize() and '_' for x in word.split('_')))",Or_to_And,expanded_mutator,True
+412,"def remove_odd(l):
+    for i in l:
+        if i % 2 != 0:
+            l.remove(i)
+    return l","def remove_odd(l):
+    for i in l:
+        if i % 2 == 0:
+            l.remove(i)
+    return l",NotEq_to_Eq,expanded_mutator,True
+414,"def overlapping(list1, list2):
+    for i in range(len(list1)):
+        for j in range(len(list2)):
+            if list1[i] == list2[j]:
+                return True
+    return False","def overlapping(list1, list2):
+    for i in range(len(list1)):
+        for j in range(len(list2)):
+            if list1[i] != list2[j]:
+                return True
+    return False",Eq_to_NotEq,expanded_mutator,True
+415,"def max_Product(arr):
+    arr_len = len(arr)
+    if arr_len < 2:
+        return 'No pairs exists'
+    x = arr[0]
+    y = arr[1]
+    for i in range(0, arr_len):
+        for j in range(i + 1, arr_len):
+            if arr[i] * arr[j] > x * y:
+                x = arr[i]
+                y = arr[j]
+    return (x, y)","def max_Product(arr):
+    arr_len = len(arr)
+    if arr_len > 2:
+        return 'No pairs exists'
+    x = arr[0]
+    y = arr[1]
+    for i in range(0, arr_len):
+        for j in range(i + 1, arr_len):
+            if arr[i] * arr[j] > x * y:
+                x = arr[i]
+                y = arr[j]
+    return (x, y)",Lt_to_Gt,original_mutator,True
+418,"def Find_Max(lst):
+    maxList = max((x for x in lst))
+    return maxList","def Find_Max(lst):
+    maxList = min((x for x in lst))
+    return maxList",max_to_min,original_mutator,True
+420,"def cube_Sum(n):
+    sum = 0
+    for i in range(1, n + 1):
+        sum += 2 * i * (2 * i) * (2 * i)
+    return sum","def cube_Sum(n):
+    sum = 0
+    for i in range(1, n - 1):
+        sum += 2 * i * (2 * i) * (2 * i)
+    return sum",Add_to_Sub,expanded_mutator,True
+421,"def concatenate_tuple(test_tup):
+    delim = '-'
+    res = ''.join([str(ele) + delim for ele in test_tup])
+    res = res[:len(res) - len(delim)]
+    return str(res)","def concatenate_tuple(test_tup):
+    delim = '-'
+    res = ''.join([str(ele) + delim for ele in test_tup])
+    res = res[:len(res) + len(delim)]
+    return str(res)",Sub_to_Add,expanded_mutator,True
+422,"def find_Average_Of_Cube(n):
+    sum = 0
+    for i in range(1, n + 1):
+        sum += i * i * i
+    return round(sum / n, 6)","def find_Average_Of_Cube(n):
+    sum = 0
+    for i in range(1, n - 1):
+        sum += i * i * i
+    return round(sum / n, 6)",Add_to_Sub,expanded_mutator,True
+426,"def filter_oddnumbers(nums):
+    odd_nums = list(filter(lambda x: x % 2 != 0, nums))
+    return odd_nums","def filter_oddnumbers(nums):
+    odd_nums = list(filter(lambda x: x % 2 == 0, nums))
+    return odd_nums",NotEq_to_Eq,expanded_mutator,True
+428,"def shell_sort(my_list):
+    gap = len(my_list) // 2
+    while gap > 0:
+        for i in range(gap, len(my_list)):
+            current_item = my_list[i]
+            j = i
+            while j >= gap and my_list[j - gap] > current_item:
+                my_list[j] = my_list[j - gap]
+                j -= gap
+            my_list[j] = current_item
+        gap //= 2
+    return my_list","def shell_sort(my_list):
+    gap = len(my_list) // 2
+    while gap < 0:
+        for i in range(gap, len(my_list)):
+            current_item = my_list[i]
+            j = i
+            while j >= gap and my_list[j - gap] > current_item:
+                my_list[j] = my_list[j - gap]
+                j -= gap
+            my_list[j] = current_item
+        gap //= 2
+    return my_list",Gt_to_Lt,original_mutator,True
+430,"def parabola_directrix(a, b, c):
+    directrix = int(c - (b * b + 1) * 4 * a)
+    return directrix","def parabola_directrix(a, b, c):
+    directrix = int(c - (b / b + 1) * 4 * a)
+    return directrix",Mult_to_Div,expanded_mutator,True
+431,"def common_element(list1, list2):
+    result = False
+    for x in list1:
+        for y in list2:
+            if x == y:
+                result = True
+                return result","def common_element(list1, list2):
+    result = False
+    for x in list1:
+        for y in list2:
+            if x != y:
+                result = True
+                return result",Eq_to_NotEq,expanded_mutator,True
+432,"def median_trapezium(base1, base2, height):
+    median = 0.5 * (base1 + base2)
+    return median","def median_trapezium(base1, base2, height):
+    median = 0.5 * (base1 - base2)
+    return median",Add_to_Sub,expanded_mutator,True
+433,"def check_greater(arr, number):
+    arr.sort()
+    return number > arr[-1]","def check_greater(arr, number):
+    arr.sort()
+    return number < arr[-1]",Gt_to_Lt,original_mutator,True
+436,"def neg_nos(list1):
+    out = []
+    for num in list1:
+        if num < 0:
+            out.append(num)
+    return out","def neg_nos(list1):
+    out = []
+    for num in list1:
+        if num > 0:
+            out.append(num)
+    return out",Lt_to_Gt,original_mutator,True
+437,"def remove_odd(str1):
+    str2 = ''
+    for i in range(1, len(str1) + 1):
+        if i % 2 == 0:
+            str2 = str2 + str1[i - 1]
+    return str2","def remove_odd(str1):
+    str2 = ''
+    for i in range(1, len(str1) - 1):
+        if i % 2 == 0:
+            str2 = str2 + str1[i - 1]
+    return str2",Add_to_Sub,expanded_mutator,True
+438,"def count_bidirectional(test_list):
+    res = 0
+    for idx in range(0, len(test_list)):
+        for iidx in range(idx + 1, len(test_list)):
+            if test_list[iidx][0] == test_list[idx][1] and test_list[idx][1] == test_list[iidx][0]:
+                res += 1
+    return res","def count_bidirectional(test_list):
+    res = 0
+    for idx in range(0, len(test_list)):
+        for iidx in range(idx + 1, len(test_list)):
+            if test_list[iidx][0] != test_list[idx][1] and test_list[idx][1] == test_list[iidx][0]:
+                res += 1
+    return res",Eq_to_NotEq,expanded_mutator,True
+441,"def surfacearea_cube(l):
+    surfacearea = 6 * l * l
+    return surfacearea","def surfacearea_cube(l):
+    surfacearea = 6 / l * l
+    return surfacearea",Mult_to_Div,expanded_mutator,True
+442,"from array import array
+
+def positive_count(nums):
+    n = len(nums)
+    n1 = 0
+    for x in nums:
+        if x > 0:
+            n1 += 1
+        else:
+            None
+    return round(n1 / n, 2)","from array import array
+
+def positive_count(nums):
+    n = len(nums)
+    n1 = 0
+    for x in nums:
+        if x < 0:
+            n1 += 1
+        else:
+            None
+    return round(n1 / n, 2)",Gt_to_Lt,original_mutator,True
+443,"def largest_neg(list1):
+    max = list1[0]
+    for x in list1:
+        if x < max:
+            max = x
+    return max","def largest_neg(list1):
+    max = list1[0]
+    for x in list1:
+        if x > max:
+            max = x
+    return max",Lt_to_Gt,original_mutator,True
+444,"def trim_tuple(test_list, K):
+    res = []
+    for ele in test_list:
+        N = len(ele)
+        res.append(tuple(list(ele)[K:N - K]))
+    return str(res)","def trim_tuple(test_list, K):
+    res = []
+    for ele in test_list:
+        N = len(ele)
+        res.append(tuple(list(ele)[K:N + K]))
+    return str(res)",Sub_to_Add,expanded_mutator,True
+445,"def index_multiplication(test_tup1, test_tup2):
+    res = tuple((tuple((a * b for a, b in zip(tup1, tup2))) for tup1, tup2 in zip(test_tup1, test_tup2)))
+    return res","def index_multiplication(test_tup1, test_tup2):
+    res = tuple((tuple((a / b for a, b in zip(tup1, tup2))) for tup1, tup2 in zip(test_tup1, test_tup2)))
+    return res",Mult_to_Div,expanded_mutator,True
+448,"def cal_sum(n):
+    a = 3
+    b = 0
+    c = 2
+    if n == 0:
+        return 3
+    if n == 1:
+        return 3
+    if n == 2:
+        return 5
+    sum = 5
+    while n > 2:
+        d = a + b
+        sum = sum + d
+        a = b
+        b = c
+        c = d
+        n = n - 1
+    return sum","def cal_sum(n):
+    a = 3
+    b = 0
+    c = 2
+    if n == 0:
+        return 3
+    if n == 1:
+        return 3
+    if n == 2:
+        return 5
+    sum = 5
+    while n < 2:
+        d = a + b
+        sum = sum + d
+        a = b
+        b = c
+        c = d
+        n = n - 1
+    return sum",Gt_to_Lt,original_mutator,True
+450,"def extract_string(str, l):
+    result = [e for e in str if len(e) == l]
+    return result","def extract_string(str, l):
+    result = [e for e in str if len(e) != l]
+    return result",Eq_to_NotEq,expanded_mutator,True
+452,"def loss_amount(actual_cost, sale_amount):
+    if sale_amount > actual_cost:
+        amount = sale_amount - actual_cost
+        return amount
+    else:
+        return 0","def loss_amount(actual_cost, sale_amount):
+    if sale_amount < actual_cost:
+        amount = sale_amount - actual_cost
+        return amount
+    else:
+        return 0",Gt_to_Lt,original_mutator,True
+453,"import math
+
+def sumofFactors(n):
+    if n % 2 != 0:
+        return 0
+    res = 1
+    for i in range(2, int(math.sqrt(n)) + 1):
+        count = 0
+        curr_sum = 1
+        curr_term = 1
+        while n % i == 0:
+            count = count + 1
+            n = n // i
+            if i == 2 and count == 1:
+                curr_sum = 0
+            curr_term = curr_term * i
+            curr_sum = curr_sum + curr_term
+        res = res * curr_sum
+    if n >= 2:
+        res = res * (1 + n)
+    return res","import math
+
+def sumofFactors(n):
+    if n % 2 != 0:
+        return 0
+    res = 1
+    for i in range(2, int(math.sqrt(n)) + 1):
+        count = 0
+        curr_sum = 1
+        curr_term = 1
+        while n % i == 0:
+            count = count + 1
+            n = n // i
+            if i == 2 and count == 1:
+                curr_sum = 0
+            curr_term = curr_term * i
+            curr_sum = curr_sum + curr_term
+        res = res * curr_sum
+    if n <= 2:
+        res = res * (1 + n)
+    return res",GtE_to_LtE,original_mutator,True
+455,"def check_monthnumb_number(monthnum2):
+    if monthnum2 == 1 or monthnum2 == 3 or monthnum2 == 5 or (monthnum2 == 7) or (monthnum2 == 8) or (monthnum2 == 10) or (monthnum2 == 12):
+        return True
+    else:
+        return False","def check_monthnumb_number(monthnum2):
+    if monthnum2 != 1 or monthnum2 == 3 or monthnum2 == 5 or (monthnum2 == 7) or (monthnum2 == 8) or (monthnum2 == 10) or (monthnum2 == 12):
+        return True
+    else:
+        return False",Eq_to_NotEq,expanded_mutator,True
+457,"def Find_Min(lst):
+    return min(lst, key=len)","def Find_Min(lst):
+    return max(lst, key=len)",min_to_max,original_mutator,True
+458,"def rectangle_area(l, b):
+    area = l * b
+    return area","def rectangle_area(l, b):
+    area = l / b
+    return area",Mult_to_Div,expanded_mutator,True
+461,"def upper_ctr(str):
+    upper_ctr = 0
+    for i in range(len(str)):
+        if str[i] >= 'A' and str[i] <= 'Z':
+            upper_ctr += 1
+        return upper_ctr","def upper_ctr(str):
+    upper_ctr = 0
+    for i in range(len(str)):
+        if str[i] <= 'A' and str[i] <= 'Z':
+            upper_ctr += 1
+        return upper_ctr",GtE_to_LtE,original_mutator,True
+462,"def combinations_list(list1):
+    if len(list1) == 0:
+        return [[]]
+    result = []
+    for el in combinations_list(list1[1:]):
+        result += [el, el + [list1[0]]]
+    return result","def combinations_list(list1):
+    if len(list1) != 0:
+        return [[]]
+    result = []
+    for el in combinations_list(list1[1:]):
+        result += [el, el + [list1[0]]]
+    return result",Eq_to_NotEq,expanded_mutator,True
+463,"def max_subarray_product(arr):
+    n = len(arr)
+    max_ending_here = 1
+    min_ending_here = 1
+    max_so_far = 0
+    flag = 0
+    for i in range(0, n):
+        if arr[i] > 0:
+            max_ending_here = max_ending_here * arr[i]
+            min_ending_here = min(min_ending_here * arr[i], 1)
+            flag = 1
+        elif arr[i] == 0:
+            max_ending_here = 1
+            min_ending_here = 1
+        else:
+            temp = max_ending_here
+            max_ending_here = max(min_ending_here * arr[i], 1)
+            min_ending_here = temp * arr[i]
+        if max_so_far < max_ending_here:
+            max_so_far = max_ending_here
+    if flag == 0 and max_so_far == 0:
+        return 0
+    return max_so_far","def max_subarray_product(arr):
+    n = len(arr)
+    max_ending_here = 1
+    min_ending_here = 1
+    max_so_far = 0
+    flag = 0
+    for i in range(0, n):
+        if arr[i] > 0:
+            max_ending_here = max_ending_here / arr[i]
+            min_ending_here = min(min_ending_here * arr[i], 1)
+            flag = 1
+        elif arr[i] == 0:
+            max_ending_here = 1
+            min_ending_here = 1
+        else:
+            temp = max_ending_here
+            max_ending_here = max(min_ending_here * arr[i], 1)
+            min_ending_here = temp * arr[i]
+        if max_so_far < max_ending_here:
+            max_so_far = max_ending_here
+    if flag == 0 and max_so_far == 0:
+        return 0
+    return max_so_far",Mult_to_Div,expanded_mutator,True
+464,"def check_value(dict, n):
+    result = all((x == n for x in dict.values()))
+    return result","def check_value(dict, n):
+    result = all((x != n for x in dict.values()))
+    return result",Eq_to_NotEq,expanded_mutator,True
+468,"def max_product(arr):
+    n = len(arr)
+    mpis = arr[:]
+    for i in range(n):
+        current_prod = arr[i]
+        j = i + 1
+        while j < n:
+            if arr[j - 1] > arr[j]:
+                break
+            current_prod *= arr[j]
+            if current_prod > mpis[j]:
+                mpis[j] = current_prod
+            j = j + 1
+    return max(mpis)","def max_product(arr):
+    n = len(arr)
+    mpis = arr[:]
+    for i in range(n):
+        current_prod = arr[i]
+        j = i + 1
+        while j > n:
+            if arr[j - 1] > arr[j]:
+                break
+            current_prod *= arr[j]
+            if current_prod > mpis[j]:
+                mpis[j] = current_prod
+            j = j + 1
+    return max(mpis)",Lt_to_Gt,original_mutator,True
+470,"def add_pairwise(test_tup):
+    res = tuple((i + j for i, j in zip(test_tup, test_tup[1:])))
+    return res","def add_pairwise(test_tup):
+    res = tuple((i - j for i, j in zip(test_tup, test_tup[1:])))
+    return res",Add_to_Sub,expanded_mutator,True
+471,"def find_remainder(arr, n):
+    mul = 1
+    for i in range(len(arr)):
+        mul = mul * (arr[i] % n) % n
+    return mul % n","def find_remainder(arr, n):
+    mul = 1
+    for i in range(len(arr)):
+        mul = mul / (arr[i] % n) % n
+    return mul % n",Mult_to_Div,expanded_mutator,True
+472,"def check_Consecutive(l):
+    return sorted(l) == list(range(min(l), max(l) + 1))","def check_Consecutive(l):
+    return sorted(l) == list(range(max(l), max(l) + 1))",min_to_max,original_mutator,True
+476,"def big_sum(nums):
+    sum = max(nums) + min(nums)
+    return sum","def big_sum(nums):
+    sum = min(nums) + min(nums)
+    return sum",max_to_min,original_mutator,True
+479,"def first_Digit(n):
+    while n >= 10:
+        n = n / 10
+    return int(n)","def first_Digit(n):
+    while n <= 10:
+        n = n / 10
+    return int(n)",GtE_to_LtE,original_mutator,True

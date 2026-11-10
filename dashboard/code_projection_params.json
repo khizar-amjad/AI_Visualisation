@@ -1,0 +1,15 @@
+{
+  "model": "microsoft/codebert-base",
+  "pooling": "attention-mask mean, L2-normalised",
+  "max_length": 512,
+  "umap": {
+    "n_neighbors": 15,
+    "min_dist": 0.1,
+    "n_components": 2,
+    "metric": "cosine",
+    "random_state": 42
+  },
+  "n_problems": 178,
+  "torch": "2.15.0+cpu",
+  "umap_learn": "0.5.12"
+}

@@ -1,0 +1,22 @@
+problem_id,accurate_comment,misleading_comment,reviewer_status,source
+11,Removes the first and last occurrence of the given character.,Removes every occurrence of the given character.,pilot_reviewed,previous_review
+12,Sorts the matrix rows in ascending order by their sums.,Sorts the matrix rows in descending order by their sums.,pilot_reviewed,previous_review
+14,Calculates the volume using half the product of three dimensions.,Calculates the volume using the full product of three dimensions.,pilot_reviewed,previous_review
+16,Checks for lowercase letters separated by one underscore.,Accepts uppercase letters and multiple underscores.,pilot_reviewed,previous_review
+17,Calculates a square perimeter by multiplying the side by four.,Calculates a square area by squaring the side.,pilot_reviewed,previous_review
+18,Removes characters from the first string that appear in the second.,Keeps only characters from the first string that appear in the second.,pilot_reviewed,previous_review
+19,Returns whether an array contains duplicate values.,Returns whether all values in an array are unique.,pilot_reviewed,previous_review
+20,Checks whether a number is a Woodall number.,Checks whether a number is a prime number.,pilot_reviewed,previous_review
+56,Checks whether twice the reversed number equals the original plus one.,Checks whether the reversed number equals the original.,pilot_reviewed,previous_review
+57,Sorts the digits in descending order to form the largest number.,Sorts the digits in ascending order to form the smallest number.,pilot_reviewed,previous_review
+58,Returns True when the two integers have opposite signs.,Returns True when the sum of the two integers is negative.,human_reviewed,previous_review
+62,This function takes a list of numbers as input and returns the smallest number in that list using the built-in `min()` function.,This function takes a list of numbers as input and returns the largest number in that list using the built-in `max()` function instead.,human_reviewed,previous_review
+63,This function calculates the maximum absolute difference between any two numbers in a given tuple list.,This function calculates the minimum absolute difference between any two numbers in a given tuple list.,human_reviewed,previous_review
+64,This function sorts a list of tuples based on the second element (the marks) in each tuple.,This function sorts a list of tuples based on the first element (the subject name) instead of the second element (the marks).,human_reviewed,previous_review
+67,Computes the nth Bell number using a dynamic programming table.,Returns the sum of Bell numbers from 1 through n.,human_reviewed,previous_review
+69,Checks whether a list contains a given contiguous sublist.,Returns False when the requested sublist is empty.,human_reviewed,previous_review
+70,Returns True when all input tuples have equal lengths.,Returns True when at least two input tuples have equal lengths.,human_reviewed,previous_review
+87,"Merges three dictionaries, prioritizing values from the first dictionary.",Returns an empty dictionary if any input dictionary is empty.,human_reviewed,previous_review
+88,Counts occurrences of each element using a Counter.,Assigns a count of one to every distinct element.,human_reviewed,previous_review
+89,Returns the input number minus one.,Returns the input number unchanged when it is zero.,human_reviewed,previous_review
+59,Calculates the nth octagonal number using 3*n*n - 2*n.,Calculates the nth octagonal number using 3*n*n + 2*n.,approved,ai_generated
