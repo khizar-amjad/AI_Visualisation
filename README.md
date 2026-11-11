@@ -56,7 +56,11 @@ Start Streamlit:
 
     python -m streamlit run dashboard/app.py
 
-The app has two pages: Overview (`app.py`) and Interactive Analysis (in the sidebar).
+The app has three pages: Overview (`app.py`), Interactive Analysis (AI-assisted
+data) and Human-Only Analysis (the four-condition data pair in
+`dashboard/human-only/`, including AUROC with bootstrap intervals, Wilcoxon tests and
+a neutral-comment control). The Human-Only page needs `scipy`, which is in
+`requirements.txt`.
 
 ### Code projection (optional regeneration)
 
