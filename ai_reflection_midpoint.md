@@ -62,4 +62,13 @@ Our experience suggests that Generative AI is most useful when treated as an **i
 
 AI helped us explore more alternatives and implement more ambitious experiments. However, verifying its outputs introduced additional work, particularly for semantic correctness and visualization design.
 
-We also learned that visualizations should not merely present aggregate results but should help users understand individual model decisions, identify patterns, and investigate why certain comments influence model confidence.
+We also learned that visualizations should not merely display aggregate metrics. They should help investigate unexpected model behavior and test possible explanations.
+Our strongest finding—the consistent Min/Max confidence decrease—emerged through repeated visual analysis, critical discussion, and follow-up experiments.
+
+##6. Conclusion and Next Steps
+
+Overall, AI assistance substantially broadened our investigation, but human judgment remained essential for research direction, validation, and interpretation.
+
+For Phase II, we plan to investigate the internal model mechanisms associated with the behaviors identified in Phase I, potentially using representations, attention, or attribution techniques.
+
+We will also compare our AI-assisted process and findings with those of the human-only pair to evaluate how GenAI affected the depth, efficiency, and reliability of the investigation.
