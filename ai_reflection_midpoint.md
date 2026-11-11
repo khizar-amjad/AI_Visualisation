@@ -8,7 +8,7 @@
 **AI-aided pair members:**
 
 - **Student 1:** Hovhannes Davtyan — K12349259
-- **Student 2:** [First name, last name] — [Student ID]
+- **Student 2:** Ananda Pravin Dhamankar — K12541767
 
 ## 1. How We Used Generative AI
 
